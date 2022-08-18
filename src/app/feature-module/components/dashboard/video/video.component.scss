@@ -1,0 +1,246 @@
+.bg-header {
+    background-color: #fff;
+}
+
+.left-box img {
+    width: 150px;
+}
+
+.left-box i {
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.form-outline {
+    width: 400px
+}
+
+.btn {
+    background-color: rgb(249, 244, 244);
+    ;
+}
+
+.microphone {
+    height: 40px;
+    width: 40px;
+    line-height: 38px;
+    border-radius: 100%;
+    background-color: rgb(249, 244, 244);
+}
+
+section {
+    float: left;
+    position: relative;
+    width: 100%;
+}
+
+.gap2 {
+    padding: 30px 0;
+    position: relative;
+}
+
+.video-js {
+    height: auto;
+    width: 100%;
+}
+
+.central-meta {
+    // background: #fff none repeat scroll 0 0;
+    // border: 1px solid #ede9e9;
+    border-radius: 5px;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+    height: 364px;
+    // overflow: auto;
+}
+
+.create-post {
+    border-bottom: 1px solid #e6ecf5;
+    display: block;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    text-transform: capitalize;
+    width: 100%;
+    color: #515365;
+    position: relative;
+}
+
+.rlted-video {
+    // border-bottom: 1px solid #dcdcdc;
+    display: inline-block;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+.rlted-video {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+.pit-tags {
+    display: inline-block;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.pit-tags>a {
+    border: 1px solid #dcdcdc;
+    border-radius: 15px;
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    margin-bottom: 5px;
+    transition: all 0.2s linear 0s;
+}
+
+.side-right-panel {
+    height: 280px;
+    // overflow: auto;
+    // padding: 20px;
+    padding-left: 0px;
+}
+
+// .side-right-panel::-webkit-scrollbar {
+//   width: 5px;               /* width of the entire scrollbar */
+// }
+
+// .side-right-panel::-webkit-scrollbar-track {
+//   background: transparent;        /* color of the tracking area */
+// }
+
+// .side-right-panel::-webkit-scrollbar-thumb {
+//   background-color: #aaa;    /* color of the scroll thumb */
+//   border-radius: 20px;       /* roundness of the scroll thumb */
+//   border: 1px solid transparent;  /* creates padding around scroll thumb */
+// }
+
+
+.tube-pst-meta .title {
+    font-size: 16px;
+}
+
+.fa-trash-o:before,
+.fa-ellipsis-v:before {
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.rlted-video:hover .fa-trash-o:before,
+.rlted-video:hover .fa-ellipsis-v:before {
+    visibility: visible !important;
+    cursor: pointer;
+}
+
+.rlted-video:hover {
+    background-color: #fbfafa;
+}
+
+.dropdown-toggle {
+    visibility: hidden;
+}
+
+.dropdown-menu {
+    position: relative;
+    min-width: auto;
+}
+
+.pit-tags .a {
+    margin-right: 10px;
+    text-decoration: none !important;
+}
+
+h4,
+.h4 {
+    font-size: 18px;
+}
+
+.fa-thumbs-up,
+.fa-thumbs-o-up,
+.fa-thumbs-down,
+.fa-thumbs-o-down {
+    cursor: pointer;
+}
+
+.custom-slider-main {
+    // display: flex;
+    overflow: hidden;
+    // scroll-behavior: smooth;
+    // float: left;
+    width: 302px;
+    white-space: nowrap;
+    display: inline-flex;
+}
+
+.info-box {
+    // width: 200px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.info-box-rounded {
+    height: 30px;
+    width: 100%;
+    padding: 0 15px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    background-color: rgb(236 236 236);
+    border: 1px solid rgb(224 224 224);
+    padding-top: 5px;
+}
+
+.arrow-css {
+    border-radius: 999rem;
+    cursor: pointer;
+    height: 36px;
+    width: 36px;
+    background-color: transparent;
+    color: #70757a;
+    padding: 5px;
+}
+
+.arrow-css:hover {
+    background-color: rgb(224 224 224);
+    // border: 1px solid #dadce0;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 4%), 0 4px 8px 0 rgb(0 0 0 / 20%);
+}
+
+.dropdown-menu {
+    left: inherit !important;
+    right: 0px;
+    transform: translate3d(-25px, 30px, 0px) !important;
+}
+
+.title {
+    color: black;
+    text-decoration: none;
+}
+
+.img-box {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.btn-danger {
+    margin-left: 300px;
+    width: 100px;
+    height: 40px;
+    background-color: #cc0633;
+}

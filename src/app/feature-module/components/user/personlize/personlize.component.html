@@ -1,0 +1,105 @@
+<div class="main">
+    <!-- Dashboard section -->
+    <div class="">
+
+    </div>
+    <div class="">
+
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex flex-column align-items-center text-center">
+                        <img src="../assets/images/T studio kansikuva 2-1646410490567.jpg" alt="Admin"
+                            class="rounded-circle p-1 bg-primary" width="110">
+                        <form>
+                            <div class="input-group mt-3">
+                                <div class="custom-file">
+                                    <input type="file" class="form-control form-control-sm" name="profileImage"
+                                        required="">
+                                    <label class="form-label" name="profileImage"></label>
+                                </div>
+                                <div class="input-group-append">
+                                    <button type="button" (click)="error()" class="btn btn-sm btn-primary"><i
+                                            class="fa fa-upload"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="mt-3">
+                            <h4>
+                                Admin User
+                            </h4>
+                            <p class="text-secondary mb-1">
+                                admin@gmail.com
+                            </p>
+                            <p class="text-muted font-size-sm">
+                                Token Tube
+                            </p>
+                        </div>
+                    </div>
+
+                    <ul class="list-group list-group-flush">
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-body">
+                    <div class="">
+
+                    </div>
+                    <form class="we-form" novalidate="">
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Full Name</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="text" class="form-control" placeholder="Full Name" name="fullname"
+                                    value="Admin User">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Email</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="email" class="form-control" placeholder="Email" name="email"
+                                    value="admin@gmail.com" readonly="">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Mobile</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="number" class="form-control" placeholder="Mobile number" name="mobile"
+                                    value="9876543210">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Address</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                <input type="text" class="form-control" placeholder="Address" name="address"
+                                    value="Token Tube">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-9 text-secondary">
+                                <!-- <input type="button" class="btn btn-primary px-4" value="Save Changes"> -->
+                                <button type="button" (click)="savechange()" class="btn btn-primary" data-ripple="">Save
+                                    Changes</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

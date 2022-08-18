@@ -1,0 +1,224 @@
+<div class="main">
+    <!-- Dashboard section -->
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- <div class="col-lg-6"> -->
+                    <div class="">
+
+                    </div>
+
+                    <div class="card">
+                        <form [formGroup]="uploadForm" (ngSubmit)="uploadForms()" class="we-form">
+                            <div class="card-body">
+                                <div class="row mb-3">
+                                    <div class="col-lg-6 col-sm-3">
+                                        <label class="mb-1"><b>Channel Name</b></label>
+                                        <div class="text-secondary">
+                                            <input formControlName="channel_name" type="text" class="form-control"
+                                                placeholder="Channel Name"
+                                                [ngClass]="{'danger-class': (submitted && f['channel_name'].errors) || (f['channel_name'].errors && f['channel_name'].touched)}" />
+                                            <div *ngIf="(submitted && f['channel_name'].errors) || (f['channel_name'].errors && f['channel_name'].touched)"
+                                                class="invalid-feedback">
+                                                <div *ngIf="f['channel_name'].errors['required']"> Channel name is
+                                                    required</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-3 mb-3">
+                                        <label class="mb-1"><b>Video Title</b></label>
+                                        <div class="text-secondary">
+                                            <input formControlName="Video_Title" type="text" class="form-control"
+                                                placeholder="Video Title"
+                                                [ngClass]="{'danger-class': (submitted && f['Video_Title'].errors) || (f['Video_Title'].errors && f['Video_Title'].touched)}" />
+                                            <div *ngIf="(submitted && f['Video_Title'].errors) || (f['Video_Title'].errors && f['Video_Title'].touched)"
+                                                class="invalid-feedback">
+                                                <div *ngIf="f['Video_Title'].errors['required']"> Video Title is
+                                                    required</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 mb-3">
+                                        <label class="mb-1"><b>Description</b></label>
+                                        <div class="text-secondary">
+                                            <textarea formControlName="description" type="text" class="form-control"
+                                                placeholder="Tell viewers about your video" rows="5"
+                                                [ngClass]="{'danger-class': (submitted && f['description'].errors) || (f['description'].errors && f['description'].touched)}">
+                                            </textarea>
+                                            <div *ngIf="(submitted && f['description'].errors) || (f['description'].errors && f['description'].touched)"
+                                                class="invalid-feedback">
+                                                <div *ngIf="f['description'].errors['required']"> Video description is
+                                                    required</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-3">
+                                        <label class="mb-1"><b>Video File</b></label>
+                                        <div class="text-secondary">
+                                            <input formControlName="videoFile" name="videoFile" type="file"
+                                                class="form-control"
+                                                [ngClass]="{'danger-class': (submitted && f['videoFile'].errors) || (f['videoFile'].errors && f['videoFile'].touched)}" />
+                                            <div *ngIf="(submitted && f['videoFile'].errors) || (f['videoFile'].errors && f['videoFile'].touched)"
+                                                class="invalid-feedback">
+                                                <div *ngIf="f['videoFile'].errors['required']"> video File is
+                                                    required</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-3">
+                                        <label class="mb-1"><b>Thumbnail</b></label>
+                                        <div class="text-secondary">
+                                            <input formControlName="thumbImg" type="file" name="thumbImg"
+                                                class="form-control"
+                                                [ngClass]="{'danger-class': (submitted && f['thumbImg'].errors) || (f['thumbImg'].errors && f['thumbImg'].touched)}" />
+                                            <div *ngIf="(submitted && f['thumbImg'].errors) || (f['thumbImg'].errors && f['thumbImg'].touched)"
+                                                class="invalid-feedback">
+                                                <div *ngIf="f['thumbImg'].errors['required']"> thumbImg is
+                                                    required</div>
+                                            </div>
+                                            <p>Upload a picture that shows what's in your video. A good
+                                                thumbnail
+                                                stands out and draws viewers' attention.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-3">
+                                        <label class="mb-1"><b>Playlist: (Optional)</b></label>
+                                        <div class="text-secondary">
+                                            <select formControlName="playlist" class="form-select" name="playlist" id=""
+                                                [ngClass]="{'danger-class': (submitted && f['playlist'].errors) || (f['playlist'].errors && f['playlist'].touched)}">
+                                                <option value="">No Playlist available</option>
+                                            </select>
+                                            <div *ngIf="(submitted && f['playlist'].errors) || (f['playlist'].errors && f['playlist'].touched)"
+                                                class="invalid-feedback">
+                                                <div *ngIf="f['playlist'].errors['required']"> Video playlist is
+                                                    required</div>
+                                            </div>
+                                            <p>Add your video to one or more playlists. Playlists can help
+                                                viewers
+                                                discover your content faster.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-3">
+                                        <label class="mb-1"><b>Visibility</b></label>
+                                        <div class="text-secondary">
+                                            <select formControlName="visibility" class="form-select" name="visibility"
+                                                id=""
+                                                [ngClass]="{'danger-class': (submitted && f['visibility'].errors) || (f['visibility'].errors && f['visibility'].touched)}">
+                                                <option value=""> Select Visibility </option>
+                                                <option value="Private">Private</option>
+                                                <option value="Public">Public</option>
+                                            </select>
+                                            <div *ngIf="(submitted && f['visibility'].errors) || (f['visibility'].errors && f['visibility'].touched)"
+                                                class="invalid-feedback">
+                                                <div *ngIf="f['visibility'].errors['required']"> Video visibility is
+                                                    required</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-3"></div>
+                                    <div class="col-lg-12 col-sm-3">
+                                        <label class="mb-1"><span><b>Audience :</b></span></label>
+                                        <div>
+                                            <span>Is this video made for kids? (required)</span>
+                                        </div>
+                                        <div class="text-secondary">
+                                            <p>Regardless of your location, you're legally required to comply
+                                                with
+                                                the Children's Online Privacy Protection Act (COPPA) and/or
+                                                other
+                                                laws. You're required to tell us whether your videos are made
+                                                for
+                                                kids.</p>
+
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" name="kid" value="kid" checked="">
+                                            <label class="mt-0 p-0 ml-2 ms-2" for=""> <b>Yes, it's made for
+                                                    kids</b></label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" name="kid" value="nokid">
+                                            <label class="mt-0 p-0 ml-2 ms-2 font-weight-bold" for="">
+                                                <b>No, it's no mad for kids</b></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-3">
+                                        <label class="mb-1"><b>Category</b> </label>
+                                        <div class="text-secondary">
+                                            <p class="mb-2 mb-1">Add your video to a category so viewers can
+                                                find it
+                                                more easily.</p>
+                                            <select formControlName="category" class="form-select mt-2" name="category"
+                                                [ngClass]="{'danger-class': (submitted && f['category'].errors) || (f['category'].errors && f['category'].touched)}">
+                                                <option value="Film &amp; Animation">Film &amp; Animation</option>
+                                                <option value="Autos &amp; Vehicles">Autos &amp; Vehicles</option>
+                                                <option value="Music">Music</option>
+                                                <option value="Pets &amp; Animals">Pets &amp; Animals</option>
+                                                <option value="Sports">Sports</option>
+                                                <option value="Travel &amp; Events">Travel &amp; Events</option>
+                                                <option value="Gaming">Gaming</option>
+                                                <option value="People &amp; Blogs">People &amp; Blogs</option>
+                                                <option value="Comedy">Comedy</option>
+                                                <option value="Entertainment">Entertainment</option>
+                                                <option value="News &amp; Politics">News &amp; Politics</option>
+                                                <option value="Howto &amp; Style">Howto &amp; Style</option>
+                                                <option value="Education">Education</option>
+                                                <option value="Science &amp; Technology">Science &amp; Technology
+                                                </option>
+                                                <option value="Nonprofits &amp; Activism">Nonprofits &amp; Activism
+                                                </option>
+                                            </select>
+                                            <div *ngIf="(submitted && f['category'].errors) || (f['category'].errors && f['category'].touched)"
+                                                class="invalid-feedback">
+                                                <div *ngIf="f['category'].errors['required']"> Video category is
+                                                    required</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-3">
+                                        <label class="mb-1"><b>Tags</b></label>
+                                        <div class="text-secondary">
+                                            <p class="mb-0">Tags play a minimal role in helping viewers find your video.
+                                            </p>
+                                            <input formControlName="tag" type="text" name="tag"
+                                                class="form-control mt-2"
+                                                [ngClass]="{'danger-class': (submitted && f['tag'].errors) || (f['tag'].errors && f['tag'].touched)}" />
+                                            <div *ngIf="(submitted && f['tag'].errors) || (f['tag'].errors && f['tag'].touched)"
+                                                class="invalid-feedback">
+                                                <div *ngIf="f['tag'].errors['required']"> tag is
+                                                    required</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-3">
+                                        <label for="channel"><b>Video Languages :</b></label>
+                                        <select formControlName="lang" class="form-select mt-2" name="lang" id=""
+                                            [ngClass]="{'danger-class': (submitted && f['lang'].errors) || (f['lang'].errors && f['lang'].touched)}">
+                                            <option value="English">English</option>
+                                            <option value="Finnish">Finnish</option>
+                                        </select>
+                                        <div *ngIf="(submitted && f['lang'].errors) || (f['lang'].errors && f['lang'].touched)"
+                                            class="invalid-feedback">
+                                            <div *ngIf="f['lang'].errors['required']"> Video Languages is
+                                                required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-10"></div>
+                                    <div class="col-lg-2">
+                                        <button type="submit" class="form-control btn-primary ml-2">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

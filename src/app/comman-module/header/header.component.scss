@@ -1,0 +1,90 @@
+.add-vid {
+    border: 1px solid lightgray;
+    padding: 5px;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.ml-3,
+.mx-3 {
+    margin-left: 1rem !important;
+}
+
+.mr-2,
+.mx-2 {
+    margin-right: 0.5rem !important;
+}
+
+.headernew {
+    height: 70px;
+    box-shadow: 1px -2px 7px 1px;
+    background-color: #FFF;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+
+.search .form-control:focus {
+
+    box-shadow: none;
+}
+
+.d-flex a:hover,
+.d-flex a:focus,
+.d-flex a:active {
+    border: medium none !important;
+    color: #23527c;
+    text-decoration: underline;
+}
+
+.profile img {
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+}
+
+.icon-header i {
+    font-size: 25px;
+}
+
+.dropdown .userBtn {
+    background: transparent;
+    border: none;
+}
+
+.dropdown .dropdown-menu {
+    position: absolute !important;
+    transform: translate3d(-5px, 34px, 0px) !important;
+    top: -35px !important;
+    left: -300px !important;
+    will-change: transform !important;
+    min-width: 300px;
+    padding: 10px 15px;
+    overflow-x: auto;
+}
+
+.dropdown i {
+    font-size: 20px;
+}
+
+.dropdown-active a {
+    text-decoration: none !important;
+}
+
+.dropdown-item.active,
+.dropdown-item:active,
+.dropdown-item:hover {
+    background-color: transparent !important;
+    color: black !important;
+    text-decoration: none !important;
+}
+
+.dropdown-active:hover,
+.dropdown-active:active {
+    background-color: #ececec;
+    text-decoration: none !important;
+}
+
+.dropdown-item {
+    cursor: pointer;
+}

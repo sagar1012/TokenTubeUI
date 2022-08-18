@@ -1,0 +1,73 @@
+{
+  "banner": [
+    {
+      "banner_title": "Test1",
+      "banner_image": "C:\\fakepath\\banner.jpg",
+      "banner_imagepath": "C:\\\\Skyttus Projects\\new-tokentube\\src\\app\\admin\\assets\\images\\",
+      "banner_imagename": "banner.jpg",
+      "banner_position": "Right Top Corner",
+      "banner_status": "true",
+      "banner_description": "Test1",
+      "id": 1
+    },
+    {
+      "banner_title": "Test2",
+      "banner_image": "C:\\fakepath\\video-image.jpg",
+      "banner_imagepath": "C:\\\\Skyttus Projects\\new-tokentube\\src\\app\\admin\\assets\\images\\",
+      "banner_imagename": "video-image.jpg",
+      "banner_position": "Right Top Corner",
+      "banner_status": "true",
+      "banner_description": "Test2",
+      "id": 2
+    },
+    {
+      "banner_title": "Test3",
+      "banner_image": "C:\\fakepath\\banner.jpg",
+      "banner_imagepath": "C:\\\\Skyttus Projects\\new-tokentube\\src\\app\\admin\\assets\\images\\",
+      "banner_imagename": "banner.jpg",
+      "banner_position": "Left Bottom Corner",
+      "banner_status": "false",
+      "banner_description": "Test3",
+      "id": 3
+    },
+    {
+      "banner_title": "Test4",
+      "banner_image": "C:\\fakepath\\video-image2.jpg",
+      "banner_imagepath": "C:/Skyttus Projects/new-tokentube/src/app/admin/assets/images/",
+      "banner_imagename": "video-image2.jpg",
+      "banner_position": "Left Top Corner",
+      "banner_status": "false",
+      "banner_description": "Test4",
+      "id": 4
+    }
+  ],
+  "category": [
+    {
+      "category_name": "Test1",
+      "category_slug": "Test1",
+      "category_type": "Test1",
+      "category_description": "Test1",
+      "id": 1
+    },
+    {
+      "category_name": "Test2",
+      "category_slug": "Test2",
+      "category_type": "Test2",
+      "category_description": "Test2",
+      "id": 2
+    }
+  ],
+  "tag": [
+    {
+      "tag_name": "Tag1",
+      "tag_category": "Test1",
+      "id": 1
+    },
+    {
+      "tag_name": "Tag2",
+      "tag_category": "Test2",
+      "id": 2
+    }
+  ],
+  "video": []
+}

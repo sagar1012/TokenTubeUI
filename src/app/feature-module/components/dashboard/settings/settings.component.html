@@ -1,0 +1,696 @@
+<section>
+    <div class="container-fluid ps-0">
+        <div class="row">
+            <div class="col-sm-12 main-flex ps-0">
+                <div class="sidebar">
+                    <h2 class="mt-3">SETTINGS</h2>
+                    <div class="tab">
+                        <button id="tab1" class="tablinks active" (click)="onClickTab(1)">Account</button>
+                        <button id="tab2" class="tablinks" (click)="onClickTab(2)">Notifications</button>
+                        <button id="tab3" class="tablinks" (click)="onClickTab(3)">Playback and Performance</button>
+                        <button id="tab4" class="tablinks" (click)="onClickTab(4)">Privacy</button>
+                        <button id="tab5" class="tablinks" (click)="onClickTab(5)">Connected Apps</button>
+                        <button id="tab6" class="tablinks" (click)="onClickTab(6)">Billing and Payments</button>
+                        <button id="tab7" class="tablinks" (click)="onClickTab(7)">Advanced Settings</button>
+                    </div>
+                </div>
+                <div *ngIf="tabId==1" class="content-box ps-4 w-100 mt-3 mb-3">
+                    <h2>Account</h2>
+                    <div class="d-flex justify-content-between">
+                        <div class="text">
+                            <p class="choose mt-5">Choose how you appear and what you see on TokenTube</p>
+                            <p class="mt-3">Signed in as admin@gmail.com</p>
+                        </div>
+                        <div class="img-box text-end">
+                            <svg viewBox="0 0 155 155" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                class="style-scope yt-icon"
+                                style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                <g fill="none" fill-rule="evenodd" viewBox="0 0 155 155" class="style-scope yt-icon">
+                                    <path
+                                        d="M3.9 76.2C3.9 37.9 32.7 13 68.3 13c39.1 0 65.4 27.6 64.4 63.2 0 3.1-.3 6.2-.7 9.2-.7 4.8-6.2 8-7.8 12.4-1.8 5 .2 11-2.7 15.4a59.7 59.7 0 0 1-18.6 17.7c-9.6 5.9-21.6 4-35 4.3-12.7.4-24 2.9-33.8-2.7-18.5-10.6-30.2-30.9-30.2-56.3"
+                                        fill="#EEE" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M78.7 92.5c14.1-6.8 5.6-21 1.4-26.3 4.3 3.2 7.6 1.6 9.2.3 1.7-1.3 2.6-5-.9-8-3.4-3-13.9-13.5-21.6-20.8-.3-.2-18.6-1.7-28.2 8.3-8.6 8.9-14.4 33.2-14.4 33.2 16.1 23.5 11.9 35 5.6 44.5 10.7 7.7 49-6.6 48-7.6-9.1-8.1-10.2-18.3.9-23.6"
+                                        fill="#FF76DA" class="style-scope yt-icon"></path>
+                                    <g transform="translate(28 115.7)" class="style-scope yt-icon">
+                                        <mask fill="#fff" class="style-scope yt-icon">
+                                            <path d="M1 .4h74V25H1z" class="style-scope yt-icon"></path>
+                                        </mask>
+                                        <path
+                                            d="M40.3 25c8.7-.3 16.8-1.9 24-4.6 1.7-.6 1-1.4 2.7-2.2 1.4-.6 5.2-1.3 6.5-2.1l1.4-.9c-2.2-1-5.7-2.7-9.5-4.8-1.2-.6-4.1-.9-5.4-1.6-1.3-.7-.9-2-2.2-2.7a100.6 100.6 0 0 1-8-5.7H6.3c-1 5.3-3 9.7-5.3 13.1 1.2 1 2.5 1.8 3.9 2.6s5.3 1.4 6.8 2.1c1.4.7.4 1.6 1.8 2.2 8 3.3 17.1 4.9 26.8 4.6"
+                                            fill="#00D4B5" mask="url(#account_settings__b)" class="style-scope yt-icon">
+                                        </path>
+                                    </g>
+                                    <path
+                                        d="M32.9 131.8a59 59 0 0 0 8.6 4.3h50.7c3.3-1.2 6.4-2.7 9.3-4.3H32.9zM37.6 126h55.8c-2.5-1.2-5-2.7-7.6-4.2H37.6v4.3z"
+                                        fill="#FFF" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M46.4 55c14.1 1.7 14.1 14.3 14.1 14.3L55 74s-2.3-3.3-7.8-2.1c2.2 1.3 3.7 3.2 4.8 5.3 2.6 5.1 2.1 13-6 16.4-3 1.2-7 4-7.3 8.3-.4 6.5 4.6 10 11.6 8.7 2 9-6.2 24.8-26.9 22.5a22.9 22.9 0 0 1-18-32.7c5.4-11.8 22.4-14.7 18.9-21L46.4 55z"
+                                        fill="#4620AE" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M56.1 32a31 31 0 0 0-27 9.3C22.7 47.9 17.2 57 19 67.7c.8 3.7 40.7-35 37-35.7"
+                                        fill="#00D4B5" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M14.3 35c0-5.2 4-8.5 8.7-8.5 5.3 0 8.9 3.7 8.7 8.5a8.6 8.6 0 0 1-8.7 8.7c-5 .1-8.7-3.5-8.7-8.7"
+                                        fill="red" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M73.9 72.5c-2.8-1.3-6-1-6.8 2.3-.6 2.2.3 5.8 4.8 7.4a27.9 27.9 0 0 0 14.4 1.3c.6-3.1-.2-6.4-1.4-9.4-2.7.4-6.8.4-11-1.6"
+                                        fill="#FFF" class="style-scope yt-icon"></path>
+                                    <path d="M104.6 46H75.7c-3.6 0-5 2-5 5 0 2.9.7 5.7 4.6 5.7h30.3l-1-10.7z"
+                                        fill="#4620AE" class="style-scope yt-icon"></path>
+                                    <path d="M137.8 42.6h-29c-5.8 0-8.3 3.3-8.3 8 0 4.8 2.3 9.4 7.8 9.4h28.4l1.1-17.4z"
+                                        fill="#4620AE" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M101.3 57.8a.8.8 0 0 1-.6-.4 13 13 0 0 1-1.2-6.5c0-.4.4-.7.8-.7s.7.4.7.8c-.2 1.9.2 4.3 1 5.7a.8.8 0 0 1-.7 1.1"
+                                        fill="#9A4DFF" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M131 51.2c0-6.9 4.8-11.4 10.7-11.4 6.4 0 10.8 5 10.6 11.4-.2 6.6-4.2 11.5-10.6 11.7-6.1.2-10.6-4.6-10.6-11.7"
+                                        fill="red" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M136.1 51.3c0-3.7 2.5-6 5.6-6 3.4 0 5.7 2.6 5.6 6-.1 3.4-2.3 6-5.6 6.1-3.2.1-5.6-2.4-5.6-6.1"
+                                        fill="#FFF" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M124.4 66c.7-5.9 0-10.4-3.3-10.8-3.4-.4-4.5 4-4.5 4s.2-4.5-3-5c-3.2-.4-4.6 4.4-4.6 4.4s.9-4.7-3.6-4.3c-4.5.3-9.2 11.5-7.2 28.3a38.3 38.3 0 0 0 23.3 30.6c5.4-8 9-17.5 10.4-27.8-5.5-3.5-8.3-12.3-7.5-19.5"
+                                        fill="#FF76DA" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M107 71.7a.8.8 0 0 1-.7-.8c0-2.6.7-7.8 1.4-10.7 0-.4.5-.7.9-.6.4 0 .6.5.5.9-.7 3.2-1.3 8.1-1.3 10.4 0 .4-.3.8-.7.8M114.8 71.7a.8.8 0 0 1-.7-.8c0-2.6.7-7.8 1.3-10.7.1-.4.5-.7 1-.6.3 0 .6.5.5.9-.7 3.2-1.3 8.1-1.3 10.4 0 .4-.4.8-.8.8"
+                                        fill="#4620AE" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M66.8 37.7l-.7-.6a20.2 20.2 0 0 0-10-5L19.2 67.6c.7 3.7 2.3 7.5 5 11.5l42.6-41.5z"
+                                        fill="red" class="style-scope yt-icon"></path>
+                                    <path d="M48.6 55.4C59.1 53 71.6 45 66.8 37.7L48.6 55.4z" fill="#4620AE"
+                                        class="style-scope yt-icon"></path>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <hr class="mt-2 mb-2">
+                    <h2>Your TokenTube channel</h2>
+                    <p>This is your public presence on TokenTube. You need a channel to upload your own videos, comment
+                        on videos or create
+                        playlists.</p>
+
+                    <div class="d-flex">
+                        <h4>Your channel</h4>
+                        <div class="link-text ms-5 ps-5">
+                            <div class="d-flex align-items-center setting-img">
+                                <img src="../../assets/images/u1.jpg" alt="user-img">
+                                <h3 class="ms-3">Admin Name</h3>
+                            </div>
+                            <a class=" d-block mt-3" href="#">Channel status and features</a>
+                            <a class="d-block mt-2" href="#">Create a new channel</a>
+                            <a class="d-block mt-2" href="#">View advanced settings</a>
+                        </div>
+
+                    </div>
+                    <hr class="mt-4 mb-2">
+                    <h4 class="fw-bold">Your account</h4>
+                    <p>You sign in to YouTube with your Google Account</p>
+                    <div class="d-flex mt-5">
+                        <h4 class="fw-bold">Google Account</h4>
+                        <div class="account-text ms-5  ps-5">
+                            <a href="">View or change your Google Account settings</a>
+                            <p>You will be redirected to your Google Account page</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mt-5">
+                        <h4 class="fw-bold">Membership</h4>
+                        <div class="account-text ms-5 ps-5">
+                            <a href="">No membership | Get YouTube Premium</a>
+                            <p>TokenTube Premium offers uninterrupted music, ad-free videos and morepage</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="tabId==2" class="content-box ps-4 w-100 mt-3 mb-3">
+                    <h2>Notifications</h2>
+                    <div class="d-flex justify-content-between">
+                        <div class="text">
+                            <p class="choose mt-5">Choose when and how to be notified</p>
+                            <p class="mt-3">Select push and email notifications that you'd like to receive</p>
+                        </div>
+                        <div class="img-box text-end">
+                            <svg viewBox="0 0 155 155" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                class="style-scope yt-icon"
+                                style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                <g fill="none" fill-rule="evenodd" viewBox="0 0 155 155" class="style-scope yt-icon">
+                                    <g transform="translate(1 27.3)" class="style-scope yt-icon">
+                                        <mask fill="#fff" class="style-scope yt-icon">
+                                            <path d="M0 .7h125.5V99H0z" class="style-scope yt-icon"></path>
+                                        </mask>
+                                        <path
+                                            d="M1.6 40.4C6.6 16.6 26.5.8 54.7.7 77.2.7 89.2 8 101 15.6c18.5 12.1 27 24.6 24 41.8-5 26.4-22.6 41.3-64.3 41.6-41.8.2-67.5-17.7-59-58.6"
+                                            fill="#EEE" mask="url(1)" class="style-scope yt-icon"></path>
+                                    </g>
+                                    <path d="M63.1 47.8s21.2 11.4 23.7 12.9c2.1 1.2 2.1 3.3.3 4.9l-17.2 15L63 47.8z"
+                                        fill="#00D4B5" class="style-scope yt-icon"></path>
+                                    <g transform="translate(13 83.3)" class="style-scope yt-icon">
+                                        <mask fill="#fff" class="style-scope yt-icon">
+                                            <path d="M.9 0h77.3v43H.9z" class="style-scope yt-icon"></path>
+                                        </mask>
+                                        <path
+                                            d="M40.7.7C30.7 5 4.4 13.7 2.2 23.6L1 29.7C11.4 40.2 26.7 43.1 48.6 43c11.6 0 21.4-1 29.6-3-2.2-3.3-5-9.5-7.9-16.8C63.8 6.9 48-2.5 40.7.7"
+                                            fill="red" mask="url(#account_notifications__d)"
+                                            class="style-scope yt-icon"></path>
+                                    </g>
+                                    <path
+                                        d="M25.4 102.4c5.5.2 4.4 7.6 10.6 8.5 6.4 1 7.3-8.3 12.9-8.2 5.6.2 6.1 9.3 13.7 8.2 5.6-.8 4.5-8 9.5-9.2 4.7-1 5.3 5.6 11.2 4.7-6.5-16.3-12.8-51-20.2-58.6-3.6-3.7-15.9-3.1-23.1 0-10 4.4-15.6 7.7-18 24.5 0 0-4.8 25.8-6.8 34.5 6 .7 5.6-4.4 10.2-4.4"
+                                        fill="#FF76DA" class="style-scope yt-icon"></path>
+                                    <path d="M39.4 43.5c-9.8 4.3-14.8 11.8-17.3 27.9l41-23.6c-7.4-5.8-17.6-7-23.7-4.3"
+                                        fill="#4620AE" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M56.3 51.5a1.5 1.5 0 0 1-.8-2.8L71 40.1a1.5 1.5 0 0 1 1.5 2.6L57 51.3c-.2.2-.5.2-.7.2"
+                                        fill="#4620AE" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M41.5 70a8.4 8.4 0 0 1 9-7c.4 0 5.2 4.9 4.1 9.6-.8 3.9-2.7 7.9-2.7 7.9h-3.3c-5-.8-8-5.1-7-10.4"
+                                        fill="#FFF" class="style-scope yt-icon"></path>
+                                    <g transform="translate(85 56.3)" class="style-scope yt-icon">
+                                        <mask fill="#fff" class="style-scope yt-icon">
+                                            <path d="M.3.5H69v40.6H.3z" class="style-scope yt-icon"></path>
+                                        </mask>
+                                        <path
+                                            d="M21.6.5h40.1c3.5 0 9 0 6.7 6.2-2.3 6.4-9.3 25-11.2 28.7-1.8 3.7-4.5 5.7-9.3 5.7H7c-2 0-8.2-2-6.2-7.5 2-5.5 9.5-22.7 11.7-26.9C14.6 2.6 16 .5 21.6.5"
+                                            fill="#00D4B5" mask="url(#account_notifications__f)"
+                                            class="style-scope yt-icon"></path>
+                                    </g>
+                                    <path
+                                        d="M59 73.3c1-4.8-1.9-9.2-7.2-10.2l-1.4-.1c-3.7 3.9-2.1 13.4 1.5 17.4a8.7 8.7 0 0 0 7-7"
+                                        fill="#4620AE" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M75 125.7A179.2 179.2 0 0 1 93.5 89c6.5-8.3 12.5-9.4 14.4-8.9 1.9.5-4.4 12.6-4.4 12.6s7-10.5 12.4-7.5c1.3.7-3.4 11.9-3.4 11.9s6-9.7 11.4-7c2.6 1.2-6.8 24.3-24.4 31.6-5.2 2.2-14.3 4.1-24.7 4.1"
+                                        fill="#FF76DA" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M119.2 77.4c-2 0-3.7-.7-5-2.1-1.5-1.9-8.6-10-11.7-13.5a.7.7 0 1 1 1.1-1c3.1 3.4 10.3 11.6 11.8 13.5 1.5 1.8 5 2.5 9.3-.2l15-8.2c3.4-2 6.7-3.8 9.1-5a.7.7 0 1 1 .7 1.2l-9.1 5-14.9 8.3c-2.2 1.3-4.3 2-6.3 2"
+                                        fill="#FFF" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M33.5 41.6c.3-1.5 1.7-2.3 3.1-2 1.6.2 2.5 1.6 2.2 3a2.6 2.6 0 0 1-3.1 2.2c-1.6-.3-2.5-1.6-2.2-3.2M78.3 67.2c-1.7 0-3.7-1.1-4.2-4.3a.7.7 0 1 1 1.5-.3c.3 2.5 1.8 3.2 3 3a2.8 2.8 0 0 0 2.5-2.9c0-.4.3-.8.7-.8.4 0 .7.3.8.7a4.3 4.3 0 0 1-4.3 4.6"
+                                        fill="#4620AE" class="style-scope yt-icon"></path>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <hr class="mt-1 mb-2">
+                    <h2 class="mb-0">General</h2>
+                    <p>Manage your mobile and desktop notifications</p>
+
+                    <div class="d-flex mt-5">
+                        <h4 class="fw-bold">Your preferences</h4>
+                        <div class="account-text ms-5 ps-5">
+                            <!-- <a href="">No membership | Get YouTube Premium</a> -->
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <label class="form-check-label fw-bold"
+                                    for="flexSwitchCheckDefault">Subscriptions</label>
+                            </div>
+                            <p class="ms-3 ps-3">Notify me about activity from the channels that I'm subscribed to</p>
+
+
+                            <div class="form-check form-switch mt-4">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <label class="form-check-label fw-bold" for="flexSwitchCheckDefault">Recommended
+                                    videos</label>
+                            </div>
+                            <p class="ms-3 ps-3">Notify me of videos that I might like based on what I watch</p>
+
+                            <div class="form-check form-switch mt-4">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <label class="form-check-label fw-bold" for="flexSwitchCheckDefault">Activity on my
+                                    channel</label>
+                            </div>
+                            <p class="ms-3 ps-3">Notify me about comments and other activity on my channel or videos</p>
+
+                            <div class="form-check form-switch mt-4">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <label class="form-check-label fw-bold" for="flexSwitchCheckDefault">Replies to my
+                                    comments</label>
+                            </div>
+                            <p class="ms-3 ps-3">Notify me about replies to my comments</p>
+
+
+                            <div class="form-check form-switch mt-4">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <label class="form-check-label fw-bold" for="flexSwitchCheckDefault">Mentions</label>
+                            </div>
+                            <p class="ms-3 ps-3">Notify me when others mention my channel</p>
+
+
+                            <div class="form-check form-switch mt-4">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <label class="form-check-label fw-bold" for="flexSwitchCheckDefault">Shared
+                                    content</label>
+                            </div>
+                            <p class="ms-3 ps-3">Notify me when others share my content on their channels</p>
+                        </div>
+                    </div>
+                    <hr class="mt-2 mb-2">
+                    <h2 class="mb-0">Email notifications</h2>
+                    <p>Your emails are sent to admin@gmail.com. To unsubscribe from an email, click the 'Unsubscribe'
+                        link at the
+                        bottom of it. Learn more about emails from TokenTube.</p>
+                    <div class="d-flex mt-5">
+                        <h4 class="fw-bold">Your family</h4>
+                        <div class="account-text ms-5 ps-5">
+                            <!-- <a href="">No membership | Get YouTube Premium</a> -->
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <label class="form-check-label fw-bold ms-2" for="flexSwitchCheckDefault">Send me emails
+                                    about family and product updates for TokerTube or TokenTube Kids</label>
+                            </div>
+                            <p class="ms-4 ps-3">By turning on this setting, you're opting in to emails with
+                                recommended
+                                content, tips and product updates for families</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mt-5">
+                        <h4 class="fw-bold">Permission</h4>
+                        <div class="account-text ms-5 ps-5">
+                            <!-- <a href="">No membership | Get YouTube Premium</a> -->
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <label class="form-check-label fw-bold ms-2" for="flexSwitchCheckDefault">Send me emails
+                                    about my YouTube activity and updates that I requested</label>
+                            </div>
+                            <p class="ms-4 ps-3">If this setting is turned off, YouTube may still send you messages
+                                regarding your account, required service
+                                announcements, legal notifications and privacy matters</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mt-5">
+                        <h4 class="fw-bold">Your preferences</h4>
+                        <div class="account-text ms-5 ps-5">
+                            <!-- <a href="">No membership | Get YouTube Premium</a> -->
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <label class="form-check-label fw-bold ms-2" for="flexSwitchCheckDefault">General
+                                    product updates</label>
+                            </div>
+                            <p class="ms-4 ps-3">Announcements and recommendations</p>
+
+                            <div class="form-check form-switch mt-4">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <label class="form-check-label fw-bold ms-2" for="flexSwitchCheckDefault">YouTube
+                                    Premium updates</label>
+                            </div>
+                            <p class="ms-4 ps-3">Announcements, updates and recommendations from YouTube Premium and
+                                YouTube Music Premium</p>
+
+                            <div class="form-check form-switch mt-4">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <label class="form-check-label fw-bold ms-2" for="flexSwitchCheckDefault">Creator
+                                    updates and announcements</label>
+                            </div>
+                            <p class="ms-4 ps-3">Product announcements, creator events and personalised tips to grow
+                                your YouTube channel</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mt-5">
+                        <h4 class="fw-bold">Language</h4>
+
+
+                        <!-- Split dropup button -->
+                        <div class="btn-group dropup ms-5 ps-5">
+                            <button type="button" class="btn btn-secondary">
+                                Email language
+                            </button>
+                            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">English (India)</a>
+                                <a class="dropdown-item" href="#">English (UK)</a>
+                                <a class="dropdown-item" href="#">English (US)</a>
+                                <a class="dropdown-item" href="#">Română</a>
+                                <a class="dropdown-item" href="#">नेपाली</a>
+                                <a class="dropdown-item" href="#">मराठी</a>
+                                <a class="dropdown-item" href="#">অসমীয়া</a>
+                                <a class="dropdown-item" href="#">ગુજરાતી</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="tabId==3" class="content-box ps-4 w-100 mt-3 mb-3">
+                    <h2>Playback and performance</h2>
+                    <div class="d-flex justify-content-between">
+                        <div class="text">
+                            <p class="choose mt-5">Control your video viewing experience</p>
+                            <p class="mt-3">Playback settings apply to this browser only</p>
+                        </div>
+                        <div class="img-box text-end mt-0">
+                            <svg viewBox="0 0 155 155" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                class="style-scope yt-icon"
+                                style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                <g fill="none" fill-rule="evenodd" viewBox="0 0 155 155" class="style-scope yt-icon">
+                                    <path
+                                        d="M81.4 33.2c-40.7 0-72.2 25.3-71.4 63 .4 14 4.2 23.2 10.4 29.2 0 0 38.6 8 60.5 8 21.6 0 46.5 1.9 59.5-11.3 6-6.3 9.6-15.2 9-27.9-1.6-32.6-19.4-61-68-61"
+                                        fill="#EEE" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M51.5 127.8c14.7 2.3 29.7.8 36.6-2 6.2-2.5 8-6.5 5.6-12a26.4 26.4 0 0 1-.7-1.7c-.7-1.6-1.3-3.2-1.6-4.9-3-13.8 18.5-23.3 10.8-54.5a45.6 45.6 0 0 0-6-14.4c-8-11.9-20.4-12.3-36.7-10.5C41 29.8 26.2 38 25 60.9c-1 17.3 7.7 28 13.9 37 2 3 3.4 5.8 3.4 8.7 0 2.5-.5 4.5-1.4 6.3-2.4 5.5-4 12.7 10.7 15"
+                                        fill="#00D4B5" class="style-scope yt-icon"></path>
+                                    <g transform="translate(20 112)" class="style-scope yt-icon">
+                                        <mask fill="#fff" class="style-scope yt-icon">
+                                            <path d="M.4 1H94v24H.4z" class="style-scope yt-icon"></path>
+                                        </mask>
+                                        <path
+                                            d="M73.7 1.8c2.4 5.5-.2 9.3-6.7 11.5a104 104 0 0 1-35.3 1.5C20.6 13.8 18.4 6.4 20.8 1 18.1 6.4 8.3 11.7.4 13.5c15.2 14.5 40.5 11.2 61 11.2 8.5 0 19.6-.8 28.5-2 4-.4 1.6-1.6 4.2-2.3-4.5-1-3.4-2.5-7.7-5.3A38 38 0 0 1 73.7 1.8"
+                                            fill="#4620AE" mask="url(#account_playback__b)" class="style-scope yt-icon">
+                                        </path>
+                                    </g>
+                                    <g transform="translate(6 19)" class="style-scope yt-icon">
+                                        <mask fill="#fff" class="style-scope yt-icon">
+                                            <path d="M0 0h27.5v26.8H0z" class="style-scope yt-icon"></path>
+                                        </mask>
+                                        <path
+                                            d="M22.2 25.6c-6.7 1.9-14.7 2.1-19.1-3.9-8.6-11.4 2.2-24 14-21.2C24.5 2.3 28.5 12.8 27.2 20c-.4 2.2-5 5.6-5 5.6"
+                                            fill="#4620AE" mask="url(#account_playback__d)" class="style-scope yt-icon">
+                                        </path>
+                                    </g>
+                                    <path
+                                        d="M36.7 46.2a55.3 55.3 0 0 0 38 3.4l-2-8.7s12.5 4.9 23.4-2.7c-7.8-11.8-20.8-15.7-37-14C40.4 26.2 22.8 38 21.4 61c-1 17.3 11.1 28 17.3 37l15-14.8s-21.4-16.2-17-36.9"
+                                        fill="#4620AE" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M43.4 57.6c-5.5 0-12 3.6-9.4 12.8 2.7 9 10.8 18.6 22.9 17.8 16.6-1 21.6-12.8 25.5-19.6 3 7.5 11.5 21 25.3 19.8 13.8-1.3 17-17.5 16.8-22.8-.1-5.4-3-8-7.5-8H43.4zM125.9 38.4c-1.5 0-2 3.7-3.2 4.4-1.2.6-3.7.7-3.8 2.3 0 1.6 3.6 1.7 4.4 2.9.9 1.2 1 4.9 2.6 4.7 1.6-.1 1.6-3.9 3.1-5 1.6-1 4.2-.3 4.2-2.1 0-1.9-3.3-1.8-4.3-3.1-1-1.4-1-4.2-3-4.1"
+                                        fill="#FF76DA" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M59.4 64.3l6.4-6.7h-5.2a48.4 48.4 0 0 0-8.4 8.4c-1 2.4 4.2 2 4.2 2S46.5 78.3 41.8 83c1.2 1 2.5 2 3.9 2.7 5.5-5.5 17.7-17.9 18.2-19.4.6-2-4.5-2-4.5-2M107.8 65l7-7.4h-5a55.1 55.1 0 0 0-9.3 9.2c-1 2.3 4.3 2 4.3 2s-8 9.2-12.6 14.1c1.2 1 2.4 2 3.7 2.7 5.5-5.9 15.9-17.2 16.3-18.7.6-2-4.4-1.9-4.4-1.9"
+                                        fill="#FFF" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M42.3 67.2l9.6-9.6h-3.2a66.8 66.8 0 0 0-9.3 10c-1 2.3 4.2 2 4.2 2l-6.9 7c.3.6.8 1.4 1.4 2 4.8-4.9 8.4-8.6 8.7-9.5.6-2-4.5-1.9-4.5-1.9M67.7 78.4c1-1 1-1.8-.6-1.7a14 14 0 0 1-3.9 0l4.3-4c.6-.5 1-1 1.5-1.3 1-1-.8-2-3 0-4.6 4-5.6 5.1-5 6.3.2.3.6 1 3.3 1a129 129 0 0 0-9.3 9.6h1.9l.9-.1c3.4-3.6 9-9.1 9.9-9.8M95 71.5l1-.8c.2-.3.1-1.1-.6-1-1.5.2-3.3.3-4.7.1a213 213 0 0 1 11.7-12.2h-2.8C87.7 69.4 87.9 69.9 88.4 70.8c.2.3.6 1 3.3 1l-5 5 1.3 1.6 7-7M111.9 74.2c-1.3 1.9.4 3 1.7 1.3 2-2.3 6.5-7.6 10.7-12.2l-.8-2.1-7.4 7.9-4.2 5"
+                                        fill="red" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M135.6 93c3.2-10.4 2.2-12.8 0-13.5-2.1-.8-4.7.4-5.8 6.1 0-4-3.8-6.3-9.3-7.2-5.4-1-6.5 1.8-4.5 4.5-4.4-1.8-6.7 2.4-4.4 4.7-4.1.8-3.2 4.2-1 6.2 2.4 2 7 1.9 8.2 4.6 1.2 2.8-1 8.6-5 8.8-4.2.1-3.8-2.2-3.8-5.8 0-5.3-6.5-7-7.6 2a59.7 59.7 0 0 0 7.5 31.3 48.6 48.6 0 0 0 30.5-12.6c-6-7.3-7.8-19.3-4.8-29"
+                                        fill="#00D4B5" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M77.9 99c-4.1 0-8.3-1.8-10-5.6-.6-1.5-.3-3.1 1-3.9 1.5-.8 3-.3 4 1 1.3 1.8 3 2.5 5.2 2.4 2.1 0 3.7-.8 4.8-2.5.9-1.4 2.4-2 3.8-1.3s1.8 2.3 1.3 3.8c-1.3 3.8-5.5 6-9.7 6.2H78"
+                                        fill="#4620AE" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M140.4 48.3c.4-1.8 2-2.8 3.7-2.4 1.9.3 3 1.9 2.6 3.6A3.1 3.1 0 0 1 143 52c-1.8-.2-3-1.8-2.6-3.7"
+                                        fill="red" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M130.9 60.4c.3-1.6 1.7-2.4 3.1-2.1 1.6.3 2.5 1.6 2.2 3a2.7 2.7 0 0 1-3.2 2.2c-1.5-.2-2.4-1.5-2.1-3.1"
+                                        fill="#00D4B5" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M122.7 91.2c-.2 0-.4 0-.5-.2-2-1.8-6.3-2.5-8.6-2.5a.8.8 0 0 1 0-1.5c2.6 0 7.3.8 9.6 2.9a.8.8 0 0 1-.5 1.3M126.4 86.5c-.2 0-.4 0-.6-.2-1.9-1.8-6.2-2.5-8.5-2.5a.8.8 0 0 1 0-1.5c2.6 0 7.3.8 9.6 3a.8.8 0 0 1-.5 1.2"
+                                        fill="#4620AE" class="style-scope yt-icon"></path>
+                                    <path d="M35.5 62h-5.4c-1 0-4.3 4.6-3.7 5 .6.5 9.1 0 9.1 0v-5z" fill="#FF76DA"
+                                        class="style-scope yt-icon">
+                                    </path>
+                                    <path
+                                        d="M79.4 57.6s-4 4.4-5.2 6.2c-1.6 2.2.8 4.2 2.9 2 2.3-2.2 7.2-8.2 7.2-8.2h-4.9z"
+                                        fill="#FFF" class="style-scope yt-icon"></path>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <hr class="mt-2 mb-2">
+                    <div class="row mt-4">
+                        <div class="col-md-3">
+                            <h4 class="fw-bold mb-0">Info cards</h4>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="account-text">
+                                <!-- <a href="">No membership | Get YouTube Premium</a> -->
+                                <div class="custom-control custom-checkbox d-flex align-items-center">
+                                    <input type="checkbox" class="custom-control-input checkbox-btn" id="customCheck1">
+                                    <label class="custom-control-label ms-2 d-flex" for="customCheck1">Show in-video
+                                        info
+                                        cards
+                                        <i class="fa fa-question-circle-o ms-2 mt-1" aria-hidden="true"></i>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-3">
+                            <h4 class="fw-bold mb-0 mt-4">Subtitles and Closed Captions</h4>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="account-text">
+                                <!-- <a href="">No membership | Get YouTube Premium</a> -->
+                                <div class="custom-control custom-checkbox d-flex align-items-center mt-4">
+                                    <input type="checkbox" class="custom-control-input checkbox-btn" id="customCheck1">
+                                    <label class="custom-control-label ms-2" for="customCheck1">Always show
+                                        captions</label>
+                                </div>
+                                <div class="custom-control custom-checkbox d-flex align-items-center mt-4">
+                                    <input type="checkbox" class="custom-control-input checkbox-btn" id="customCheck1">
+                                    <label class="custom-control-label ms-2" for="customCheck1">Include auto-generated
+                                        captions (when available)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-md-3">
+                            <h4 class="fw-bold mb-0 mt-3">AV1 settings</h4>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="account-text">
+                                <!-- <a href="">No membership | Get YouTube Premium</a> -->
+                                <div class="custom-control custom-radio d-flex align-items-center mt-3">
+                                    <input type="radio" id="customRadio1" name="customRadio"
+                                        class="custom-control-input radio-btnn">
+                                    <label class="custom-control-label ms-2 " for="customRadio1">Auto
+                                        (recommended)</label>
+                                </div>
+                                <div class="custom-control custom-radio d-flex align-items-center mt-3">
+                                    <input type="radio" id="customRadio1" name="customRadio"
+                                        class="custom-control-input radio-btnn">
+                                    <label class="custom-control-label ms-2 d-flex" for="customRadio1">Prefer AV1 for
+                                        SD <i class="fa fa-question-circle-o ms-2 mt-1" aria-hidden="true"></i>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-radio d-flex align-items-center mt-3">
+                                    <input type="radio" id="customRadio1" name="customRadio"
+                                        class="custom-control-input radio-btnn">
+                                    <label class="custom-control-label ms-2 d-flex" for="customRadio1">Always prefer
+                                        AV1 <i class="fa fa-question-circle-o ms-2 mt-1" aria-hidden="true"></i>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-md-3">
+                            <h4 class="fw-bold mb-0">Browsing</h4>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="account-text">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                    <label class="form-check-label fw-bold ms-3" for="flexSwitchCheckDefault">Inline
+                                        playback</label>
+                                </div>
+                                <p class="ms-4 ps-4">Play videos when you hover over them on the home screen
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div *ngIf="tabId==4" class="content-box ps-4 w-100 mt-3 mb-3">
+                    <h2>Privacy</h2>
+                    <div class="d-flex justify-content-between">
+                        <div class="text">
+                            <p class="choose mt-5">Manage what you share on TokenTube</p>
+                            <p class="mt-3 mb-0">Choose who can see your saved playlists and subscriptions</p>
+                            <p>Review TokenTube Terms of Service and Google Privacy Policy</p>
+                        </div>
+                        <div class="img-box text-end mt-0">
+                            <svg viewBox="0 0 155 155" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                class="style-scope yt-icon"
+                                style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                <g fill="none" fill-rule="evenodd" viewBox="0 0 155 155" class="style-scope yt-icon">
+                                    <path fill="#4620AE"
+                                        d="M53.2 31.6l6.6 7.7 5-3.5-6.6-8zM27.5 114.7c0-9.5-2.4-35.5 24.5-35.5h46.2l-.6 42.1-70.1-6.6z"
+                                        class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M62.1 37.8c9.6-7 34.8 1 35.2 1.3l14.5 15.1c1.4 1.6.8 5.6-2.8 5.4h-5.6c-.9 0-1.7.8-1.7 2.7 0 11.6-2.7 22.9-9.4 23.6-25.6 2.9-23-6.7-40.1-6.7 0 0 .3-3.5-1-7.1-.2-.3-4.4-23.3 11-34.3"
+                                        fill="#FF76DA" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M72.4 69.1c.4-1.3 1-7.4 1.5-10.4.4-3-1.9-3.4-3.7-3.8-1.7-.3-6.8-1.6-6-8 .6-6.5 8.3-7.8 13.7-7.8h19.4l-1.1-1.2c-9.7-10-26.9-7.6-36.5-.7-15.3 11-10.7 30-9 34 .2.2.3.6.4.9h17.1c2.7 0 4-1.7 4.2-3"
+                                        fill="#4620AE" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M83.6 50.6l4.1-7.2 1.5-.2c7.3-.3 8.8 4.8 8.7 7 0 4.5-4.1 7.3-8.6 7.1l-2.1-.3s-1.8-4.3-3.6-6.4"
+                                        fill="#FFF" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M94 68.7l-2.4-.3a10 10 0 0 1-6.6-5.7 1 1 0 0 1 1.8-.8c1 2.2 3 3.9 5.3 4.5a7 7 0 0 0 6-1 1 1 0 0 1 1.3 1.6 8.8 8.8 0 0 1-5.3 1.7M87.7 43.4c-6.4 1.1-10 7.3-10 7.3 1.9 2.1 5.7 5.3 9.5 6.3 3.7-4.4 3.3-9.3.5-13.6"
+                                        fill="#4620AE" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M45 47.4c2.7-9.8 13-22.8 34.4-22.4.9 0 1.6-.7 1.6-1.6v-6.8c0-.9-.7-1.6-1.6-1.6-14.8.1-38.8 2.6-46 31.6-.2 1 .6 2 1.6 2h8.4c.7 0 1.3-.5 1.5-1.2"
+                                        fill="#00D4B5" class="style-scope yt-icon"></path>
+                                    <g transform="translate(16 97.2)" class="style-scope yt-icon">
+                                        <mask fill="#fff" class="style-scope yt-icon">
+                                            <path d="M0 .9h118.6V43H0z" class="style-scope yt-icon"></path>
+                                        </mask>
+                                        <path
+                                            d="M5.2.9C1.9.9 0 2.5 0 6.7v17.4c0 2.5 1.3 4.5 5.2 4.5h5.6c2 0 3.3 1 3.3 4V39c0 1.8-.3 4.1 4 4.1h82.1c5 0 6.5.1 6.5-4.2V32c0-2.5.3-4.1 2.8-4.1h4c2 0 5.1-1 5.1-4.6V.9H47.8c-3.7 0-7.6.9-7.6 4.2v4.3c0 2-1.2 3.4-4.4 3.4h-8c-2 0-3.7-1.4-3.7-3.8V5C24 3 22.9 1 20.5 1H5.2z"
+                                            fill="#00D4B5" mask="url(#account_privacy__b)" class="style-scope yt-icon">
+                                        </path>
+                                    </g>
+                                    <path
+                                        d="M106.3 130.4c1.7 0 10.2-17.8 15.9-22 5.7-4.1 15.9-7.9 15.9-10.3V80.8c0-3.3.1-6-3.7-6.9-3.8-1-5 5.3-14 5.3s-9.8-7.1-14-7.1c-3.7 0-.6 15.7-9.6 15.7S74.6 92 74.6 98v5.2c0 3 .1 6.7 5.8 10.9a709 709 0 0 0 20 14 12 12 0 0 0 6 2.2"
+                                        fill="#4620AE" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M106.3 72c-3.6 0-5.1 7.2-14.1 7.2S82.1 73 78.2 74c-3.8 1-3.6 3.6-3.6 6.9V98h31.7v-26zM132.2 114.2c5.7-4.2 5.9-7.9 5.9-10.9v-5.2h-31.8v32.3a12 12 0 0 0 6-2.3c2.1-1.4 14.2-9.7 20-14"
+                                        fill="red" class="style-scope yt-icon"></path>
+                                    <path d="M71 126.7H38.3a1 1 0 1 1 0-2H71a1 1 0 1 1 0 2" fill="#4620AE"
+                                        class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M48.2 134.4a1 1 0 0 1-1-1v-7.7a1 1 0 1 1 2 0v7.7c0 .6-.5 1-1 1M62.8 126.7a1 1 0 0 1-1-1v-7.8a1 1 0 1 1 2 0v7.8c0 .5-.4 1-1 1"
+                                        fill="#4620AE" class="style-scope yt-icon"></path>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <hr class="mt-2 mb-2">
+                    <div class="row mt-4">
+                        <div class="col-md-3">
+                            <h4 class="fw-bold mb-0">Playlists and subscriptions</h4>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="account-text">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                    <label class="form-check-label fw-bold ms-3" for="flexSwitchCheckDefault">Keep all
+                                        my saved playlists private</label>
+                                </div>
+                                <p class="ms-4 ps-4">Playlists created by others won't appear on your channel. Playlists
+                                    created by you have separate, individual privacy
+                                    settings. Learn more
+                                </p>
+
+                                <div class="form-check form-switch mt-4">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                    <label class="form-check-label fw-bold ms-3" for="flexSwitchCheckDefault">Keep all
+                                        my subscriptions private</label>
+                                </div>
+                                <p class="ms-4 ps-4">Your subscriptions won't be visible to others, unless you use
+                                    features that make them public. Learn more about what
+                                    could make your subscriptions visible or manage your subscriptions here.
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-md-3">
+                            <h4 class="fw-bold mb-0 mt-4">Ads on YouTube</h4>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="account-text ms-4 ps-4">
+                                <p class="mt-4">You may see ads on TokenTube based on general factors, like the topic of
+                                    a video. The ads that you see may also depend on your Google Ads settings.
+                                    To learn more about how ads work for family accounts with
+                                    kids, visit the Google for Families
+                                    Help Centre.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div *ngIf="tabId==5" class="content-box ps-4 w-100 mt-3 mb-3">
+                    <h2>Connected apps</h2>
+                    <div class="d-flex justify-content-between">
+                        <div class="text">
+                            <p class="choose mt-5">Expand your experience</p>
+                            <p class="mt-3 mb-0">Connect YouTube with other apps and watch more easily</p>
+                            <a href="">See all sites authorised to access your Google Account</a>
+                            <!-- <a>See all sites authorised to access your Google Account</a> -->
+                        </div>
+                        <div class="img-box text-end mt-0">
+                            <svg viewBox="0 0 155 155" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                class="style-scope yt-icon"
+                                style="pointer-events: none; display: block; width: 100%; height: 100%;">
+                                <g fill="none" fill-rule="evenodd" viewBox="0 0 155 155" class="style-scope yt-icon">
+                                    <path
+                                        d="M72 34.3C91 27 128.7 18.8 141.7 52.6c7.3 19 9.3 40.2 2.8 56.4 0 0-16.4 15-33 18-33.9 6.4-51.7 9.2-68.7 8.2-10.6-.7-28.8-10.6-28.8-10.6a45.7 45.7 0 0 1-3.7-25C12.8 72 24.1 53 72.1 34.2"
+                                        fill="#4620AE" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M100.5 69.6c0-5.6 4.2-9.3 9.4-9.3 5.7 0 9.5 4 9.4 9.3a9.3 9.3 0 0 1-9.4 9.4c-5.4.1-9.4-3.8-9.4-9.4"
+                                        fill="red" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M144.4 59.7c-4 0-6.5-3-6.5-6.6 0-4 2.9-6.7 6.5-6.6 3.7.1 6.5 2.6 6.6 6.6.1 3.8-2.6 6.6-6.6 6.6"
+                                        fill="#00D4B5" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M89.6 62.2c-2.8 0-4.5-2-4.5-4.6 0-2.7 2-4.6 4.5-4.5 2.5 0 4.5 1.8 4.5 4.5.1 2.7-1.8 4.6-4.5 4.6"
+                                        fill="#FF76DA" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M121 47.3c-1.8 0-3-1.4-3-3.1 0-1.9 1.3-3.2 3-3.1a3 3 0 0 1 3.1 3c0 1.9-1.2 3.2-3 3.2"
+                                        fill="#EEE" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M95.4 14c-2.9.1-2.7 8.7-4.2 9-1.5.2-9.4-3-10.4-.6-1 2.2 6.4 5.5 6.5 6.9 0 1.3-7.8 5.5-6.8 7.7 1 2.3 9.5-2 10.6-1.2 1 .9 2.1 8.8 4.3 8.8 2.1 0 3.6-8 5.4-8.3 1.8-.4 6.5 3.2 8.5 1.2s-5.1-5.8-4.7-7.2c.5-1.4 7.6-5.5 6.6-8-1-2.4-10.6 2.1-11.5.4-1-1.8-1.7-8.8-4.3-8.7"
+                                        fill="#FF76DA" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M106.2 58a1 1 0 0 1-1-.7l-4.6-15.2a1 1 0 1 1 2-.6l4.6 15.2a1 1 0 0 1-1 1.3M121.8 64.6a1 1 0 0 1-.4-2l12.8-5.9a1 1 0 1 1 .8 1.8l-12.8 6a1 1 0 0 1-.4.1"
+                                        fill="#00D4B5" class="style-scope yt-icon"></path>
+                                    <g transform="translate(13 71)" class="style-scope yt-icon">
+                                        <mask fill="#fff" class="style-scope yt-icon">
+                                            <path d="M.8.3h130.6V70H.8z" class="style-scope yt-icon"></path>
+                                        </mask>
+                                        <path
+                                            d="M26.7 69.7c17 1 39 0 72.9-6.3A40.2 40.2 0 0 0 131.4 38c-3.1-7.7-6.5-14.7-9.9-21.7-5-10.3-9.8-15.8-12.7-15-2 .5-2.3 2.2-1.8 6-1.5-3.2-5-7.6-7.1-7.1-2 .5-2.7 2.3-1.6 7C96.1 3 93.1.9 91.1 1.7c-1.9.9-1.8 4.2-.7 7.4-1.7-2.5-4.8-4.7-6.6-3.7-1.8 1-2.7 3.6 0 10.7 2.7 7.3 9.1 17.5 11 22.8 1.8 5.3-6.6 8.2-13.6 2.2-7.1-6-14.2-14-31.8-12.4C33.2 30.1 9.2 39.5.8 53.5a29.6 29.6 0 0 0 26 16.2"
+                                            fill="#FFF" mask="url(#account_sharing__b)" class="style-scope yt-icon">
+                                        </path>
+                                    </g>
+                                    <path
+                                        d="M51.8 128.1c-3.3 0-5.4-2.4-5.4-5.5 0-3.4 2.4-5.7 5.4-5.6 3.1.1 5.5 2.2 5.6 5.6 0 3.2-2.2 5.5-5.6 5.5"
+                                        fill="red" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M67 111.2c-2 1-5 7.7-2.6 11.1 2.4 3.5 6.3-2.8 6.3-2.8s6.7 1.2 6.7-1.8-7.2-8.1-10.4-6.5M26.6 41c-12.2 4.7-31.8 18-20 47.7 5.8 14.2 14 20.1 22.4 21.9 0 0 17.2-3.6 23.5-6.1 4.3-1.8 15.2-5 15.2-5 7.9-6.4 13.2-17.4 6.1-38.5-9.2-27.8-32.2-25.7-47.2-20"
+                                        fill="#FF76DA" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M30.5 52.4C18.6 57 8.9 67.2 16 84.4 21.2 97 29.2 96 31.4 106c.3 1.5-.1 2.9-2.4 4.5l37.6-11.1c-7-3.8 7.6-12-1.8-33.3a35 35 0 0 0-10.5-14.6c-6.7-5-14.3-3-23.8.8"
+                                        fill="#00D4B5" class="style-scope yt-icon"></path>
+                                    <path d="M54 107c4.2-1.8 9.3-4 13.7-7.5a85 85 0 0 0-38.7 11 44 44 0 0 0 25-3.5"
+                                        fill="#00D4B5" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M28 85.1c-3.7-4-12.4-9.6-10.7-15 2-6 11.4-6.1 24.1-11.5 7-3 10.9-5.4 13-7-6.8-5-14.8-4-24.3-.3-11.9 4.7-21.9 16-14.5 33 5.4 12.9 16.3 17 15.9 23.2 5.6-9.4-.3-18.7-3.6-22.4"
+                                        fill="#4620AE" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M41.7 70.2c-.7-4-5.3-3.8-5.3-3.8l-.7.3c-2.8 1.5-8.2 6-7 9.5.8 2.7 4.7 2.7 7.9 1.8.8-.3 5.7-4.3 5.1-7.8"
+                                        fill="#F7F7F7" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M44 70c-.6-4-4.7-4.7-7.6-3.6-.7 4.2-.4 8.5.2 11.5.8-.2 1.7-.5 2.4-1 3.2-1.6 5.7-3.4 5-7"
+                                        fill="#4620AE" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M56.3 58.4c-2.8 1.5-8.2 6-7 9.5.8 2.7 4.7 2.7 7.9 1.8.8-.3.8-12-.2-11.6l-.7.3"
+                                        fill="#F7F7F7" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M57 58.1c-.7 4.2-.4 8.5.2 11.6l2.4-1c2-1 3.8-2.2 4.6-3.8a48.4 48.4 0 0 0-4.1-7.2c-1-.1-2.1 0-3 .4"
+                                        fill="#4620AE" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M136.7 98H104a.8.8 0 0 1 0-1.6h32.7a.8.8 0 0 1 0 1.5M138.4 102.1h-32.7a.8.8 0 0 1 0-1.5h32.7a.8.8 0 0 1 0 1.5M96.8 118.3c-.4.2-.5.6-.3 1 2.9 5.4 5.4 11.7 7.1 16.6l1.5-.2c-1.7-5-4.3-11.5-7.3-17a.8.8 0 0 0-1-.4M101.2 117.6c-.4.1-.5.6-.3 1 2.8 5.4 5.3 11.7 7 16.6l1.6-.3c-1.8-5-4.3-11.5-7.3-17a.8.8 0 0 0-1-.3M23.4 121c-.3.2-.4.7-.1 1a62 62 0 0 1 7.5 17l1.8.5c-1.8-5.7-4.7-14-8.1-18.4a.8.8 0 0 0-1-.1M27.3 117.8c-.4.3-.5.7-.2 1a80.3 80.3 0 0 1 9 21.4l1.6.3c-2-8-5.8-17-9.4-22.5a.7.7 0 0 0-1-.2"
+                                        fill="#00D4B5" class="style-scope yt-icon"></path>
+                                    <path
+                                        d="M52.1 87c-.5 0-1 0-1.6-.2-2.3-.9-4.2-3.5-5.2-7.2a.7.7 0 1 1 1.5-.4c.8 3.2 2.4 5.5 4.2 6.2 1 .4 2 .2 3-.5 3-2-.3-8.1-.3-8.2A.8.8 0 0 1 55 76c.2.3 4 7.3-.1 10.2a5 5 0 0 1-2.8.9"
+                                        fill="#4620AE" class="style-scope yt-icon"></path>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <hr class="mt-2 mb-2">
+                </div>
+
+                <div *ngIf="tabId==6" class="content-box ps-4 w-100 mt-3 mb-3">
+                    etyyu
+                </div>
+
+                <div *ngIf="tabId==7" class="content-box ps-4 w-100 mt-3 mb-3">
+                    chhgg
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

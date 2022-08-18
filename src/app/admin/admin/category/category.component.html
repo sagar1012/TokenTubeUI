@@ -1,0 +1,156 @@
+<section class="m-5 p-5 mt-3 pt-3 me-0 pe-0" style="overflow: hidden;">
+    <div class="row">
+        <div class="col me-3">
+            <h2 class="font-weight-bold text-6">Categories</h2>
+            <div class="card card-modern">
+                <div class="card-body">
+                    <div class="mt-2">
+                        <div class="">
+                            <div class="row align-items-center mb-3">
+                                <div class="col-12 col-lg-auto mb-3 mb-lg-0">
+                                    <button class="btn btn-outline-primary mb-2 me-2" (click)="openVerticallyCentered(content)">Add Category</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <table id="dtCategory" class="table table-striped mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="th-sm" width="8%">#</th>
+                                    <th class="th-sm" width="28%">Name</th>
+                                    <th class="th-sm" width="23%">Slug</th>
+                                    <th class="th-sm" width="38%">Type</th>
+                                    <th class="th-sm" width="30%">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of categoryData; index as i;">
+                                    <td><strong>{{ data.id }}</strong></td>
+                                    <td><strong>{{ data.category_name }}</strong></td>
+                                    <td>{{ data.category_slug }}</td>
+                                    <td>{{ data.category_type }}</td>
+                                    <td>
+                                        <input type="hidden" name="hdncategoryId" value="{{data.id}}"/>
+                                        <!-- <button type="button" class="btn btn-sm"> -->
+                                            <i (click)="editCategory(content, data.id)" class="fa fa-pencil pointer" aria-hidden="true"></i>
+                                            <i (click)="deleteCategory(data.id)" class="fa fa-trash text-danger ms-3 pointer" aria-hidden="true"></i>
+                                        <!-- </button> -->
+                                    </td>
+                                </tr>                     
+                            </tbody>
+                        </table>
+                            
+                                
+                        <!-- <hr class="solid mt-5 opacity-4">
+                        <div class="">
+                            <div class="row align-items-center justify-content-between mt-3" style="float: right;">
+                                <ngb-pagination [collectionSize]="70" [(page)]="page" [boundaryLinks]="true">
+                                    <ng-template ngbPaginationPages let-page let-pages="pages">
+                                        <li class="ngb-custom-pages-item" *ngIf="pages.length > 0">
+                                            <div class="mb-3 d-flex flex-nowrap px-2">
+                                              <label
+                                                  id="paginationInputLabel"
+                                                  for="paginationInput"
+                                                  class="col-form-label me-2 ms-1"
+                                              >Page</label>
+                                              <input #i
+                                                  type="text"
+                                                  inputmode="numeric"
+                                                  pattern="[0-9]*"
+                                                  class="form-control custom-pages-input"
+                                                  id="paginationInput"
+                                                  [value]="page"
+                                                  (keyup.enter)="selectPage(i.value)"
+                                                  (blur)="selectPage(i.value)"
+                                                  (input)="formatInput($any($event).target)"
+                                                  aria-labelledby="paginationInputLabel paginationDescription"
+                                                  style="width: 2.5rem"
+                                              />
+                                              <span id="paginationDescription" class="col-form-label text-nowrap px-2">
+                                                  of {{pages.length}}</span>
+                                            </div>
+                                        </li>
+                                    </ng-template>
+                                </ngb-pagination>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Add Category</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="categoryForm" (ngSubmit)="categoryForms(categoryId)" class="we-form" method="post" novalidate="">
+            <div class="form-group row align-items-center mb-3">
+                <label class="col-lg-5 col-xl-3 control-label text-lg-end mb-0">Category Name</label>
+                <div class="col-lg-7 col-xl-6 w-74">
+                    <input value="{{f['category_name'].value}}" formControlName="category_name" type="text" class="form-control form-control-modern" placeholder="Category Name"
+                    [ngClass]="{'danger-class': (submitted && f['category_name'].errors) || (f['category_name'].errors && f['category_name'].touched)}">
+                    <div *ngIf="(submitted && f['category_name'].errors) || (f['category_name'].errors && f['category_name'].touched)"
+                                                class="invalid-feedback">
+                                                <div *ngIf="f['category_name'].errors['required']"> Category name is
+                                                    required</div>
+                                            </div>
+                </div>
+            </div>
+            <div class="form-group row align-items-center mb-3">
+                <label class="col-lg-5 col-xl-3 control-label text-lg-end mb-0">Category Slug</label>
+                <div class="col-lg-7 col-xl-6 w-74">
+                    <input value="{{f['category_slug'].value}}" formControlName="category_slug" type="text" class="form-control form-control-modern" placeholder="Category Slug"
+                    [ngClass]="{'danger-class': (submitted && f['category_slug'].errors) || (f['category_slug'].errors && f['category_slug'].touched)}">
+                    <div *ngIf="(submitted && f['category_slug'].errors) || (f['category_slug'].errors && f['category_slug'].touched)"
+                                                class="invalid-feedback">
+                                                <div *ngIf="f['category_slug'].errors['required']"> Category slug is
+                                                    required</div>
+                                            </div>
+                </div>
+            </div>
+            <div class="form-group row align-items-center mb-3">
+                <label class="col-lg-5 col-xl-3 control-label text-lg-end mb-0">Category type</label>
+                <div class="col-lg-7 col-xl-6 w-74">
+                    <input value="{{f['category_type'].value}}" formControlName="category_type" type="text" class="form-control form-control-modern" placeholder="Category Slug"
+                    [ngClass]="{'danger-class': (submitted && f['category_type'].errors) || (f['category_type'].errors && f['category_type'].touched)}">
+                    <div *ngIf="(submitted && f['category_type'].errors) || (f['category_type'].errors && f['category_type'].touched)"
+                                                class="invalid-feedback">
+                                                <div *ngIf="f['category_type'].errors['required']"> Category type is
+                                                    required</div>
+                                            </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-lg-5 col-xl-3 control-label text-lg-end pt-2 mt-1 mb-0">Description</label>
+                <div class="col-lg-7 col-xl-6 w-74">
+                    <textarea value="{{f['category_description'].value}}" class="form-control form-control-modern" formControlName="category_description" placeholder="Description" [ngClass]="{'danger-class': (submitted && f['category_description'].errors) || (f['category_description'].errors && f['category_description'].touched)}" rows="6"></textarea>
+                    <div *ngIf="(submitted && f['category_description'].errors) || (f['category_description'].errors && f['category_description'].touched)"
+                                                class="invalid-feedback">
+                                                <div *ngIf="f['category_description'].errors['required']"> Banner description is
+                                                    required</div>
+                                            </div>
+                </div>
+            </div>
+            <div class="row action-buttons mt-5">
+                <div class="col-12 col-md-auto">
+                    <button (click)="modal.close('Close click')" class="btn btn-warning d-flex align-items-center" data-ripple="">
+                        <i class="fa fa-angle-left me-2" aria-hidden="true"></i>
+                        Back to List
+                    </button>
+                   </div>
+                <div class="col-12 col-md-auto ms-md-auto mt-3 mt-md-0 ms-auto">
+                    <button type="submit" class="btn btn-primary d-flex align-items-center" data-ripple="">
+                        <i class="fa fa-floppy-o me-2" aria-hidden="true"></i>
+                        Save Category
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</ng-template>
+  
+  

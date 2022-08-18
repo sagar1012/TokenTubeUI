@@ -1,0 +1,89 @@
+.main-flex {
+    display: flex;
+    overflow-x: hidden;
+}
+
+.sidebar {
+    position: sticky;
+    // height: 100vh;
+    top: 0;
+    left: 0;
+    width: 18rem;
+    background: #eee;
+    text-align: center;
+    // padding: 1.8rem 1.85rem;
+}
+
+// .fonts {
+//     font-size: 16px;
+// }
+
+.choose {
+    font-size: 25px;
+}
+
+.img-box {
+    width: 180px;
+}
+
+.setting-img img {
+    border-radius: 45px;
+    width: 45px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Style the tab */
+.tab {
+    width: 100%;
+    text-align: center;
+    // height: 100vh;
+    padding-left: 12px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 15px 24px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    height: 300px;
+}
+
+.checkbox-btn {
+    height: 22px;
+    width: 22px;
+}
+
+.radio-btnn {
+    height: 22px;
+    width: 22px;
+}

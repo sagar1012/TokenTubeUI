@@ -1,0 +1,2203 @@
+<section class="m-5 me-3 pe-3 p-5 mt-3 pt-3 res-none" style="overflow: hidden;">
+    <div class="container">
+        <div *ngIf="isLoggedIn">
+            <div *ngIf="!isManage" class="row">
+                <div class="col-sm-12 mb-3">
+                    <div class="d-flex justify-content-between mt-2 align-items-center">
+                        <h3><b>Today</b></h3>
+                        <div class="text-icon-bx d-flex align-items-center">
+                            <p (click)="manage()" class="mb-0 pointer">MANAGE</p>
+                            <i (click)="grid()" class="fa fa-th mx-3 pointer" aria-hidden="true"></i>
+                            <i (click)="list()" class="fa fa-list-ul pointer" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GRID TAB START -->
+                <div *ngIf="isGrid">
+                    <div class="d-flex justify-content-between res-d-block">
+                        <div class="col-flex w-100">
+                            <div class="rlted-video p-1">
+                                <div>
+                                    <div id="video-image_1" class="video-image">
+                                        <img id="img" class="video-css-grid pointer d-flex" alt=""
+                                            src="../assets/images/explore/video-image.jpg">
+                                        <div id="text" class="video-timer d-flex p-1 fade-in"
+                                            aria-label="11 minutes, 7 seconds">
+                                            11:07</div>
+                                    </div>
+                                    <div class="video-thumbnail">
+                                        <img id="thumbnail" class="video-css-grid pointer fade-in" alt=""
+                                            src="../assets/images/explore/video-thumbnail.webp">
+                                        <div id="addtoqueue1" class="addtoqueue">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="queuetooltip1" class="queuetooltip">Add To
+                                                Queue</span>
+                                        </div>
+                                        <div id="watchlater1" class="watchlater">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="watchtooltip1" class="watchtooltip">Watch
+                                                Later</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex">
+                                        <div class="d-flex">
+                                            <p routerLink="/dashboard/watch/video" class="card-text">Make a Coin Save
+                                                Bank with cardboard #shorts</p>
+                                        </div>
+                                        <div class="d-flex dropdown">
+                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-ellipsis-v"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-liked"
+                                                aria-labelledby="dropdownMenuButton">
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Add to queue</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to Watch Later</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="ri-menu-add-fill ms-2 mt-2"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M22,13h-4v4h-2v-4h-4v-2h4V7h2v4h4V13z M14,7H2v1h12V7z M2,12h8v-1H2V12z M2,16h8v-1H2V16z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to playlist</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-grey card-small-text">
+                                        <span>The Prince</span>
+                                        <div class="d-flex align-items-center">
+                                            <span class="card-view">92 lakh views</span>
+                                            <span class="card-time ms-2">8 months
+                                                ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-flex w-100">
+                            <div class="rlted-video p-1">
+                                <div>
+                                    <div id="video-image_1" class="video-image">
+                                        <img id="img" class="video-css-grid pointer d-flex" alt=""
+                                            src="../assets/images/subscription/sonydanceimg.webp">
+                                        <div id="text" class="video-timer d-flex p-1 fade-in"
+                                            aria-label="11 minutes, 7 seconds">
+                                            11:07</div>
+                                    </div>
+                                    <div class="video-thumbnail">
+                                        <img id="thumbnail" class="video-css-grid pointer fade-in" alt=""
+                                            src="../assets/images/subscription/sonydancevideo.webp">
+                                        <div id="addtoqueue1" class="addtoqueue">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="queuetooltip1" class="queuetooltip">Add To
+                                                Queue</span>
+                                        </div>
+                                        <div id="watchlater1" class="watchlater">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="watchtooltip1" class="watchtooltip">Watch
+                                                Later</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex">
+                                        <div class="d-flex">
+                                            <p routerLink="/dashboard/watch/video" class="card-text">Make a Coin Save
+                                                Bank with cardboard #shorts</p>
+                                        </div>
+                                        <div class="d-flex dropdown">
+                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-ellipsis-v"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-liked"
+                                                aria-labelledby="dropdownMenuButton">
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Add to queue</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to Watch Later</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="ri-menu-add-fill ms-2 mt-2"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M22,13h-4v4h-2v-4h-4v-2h4V7h2v4h4V13z M14,7H2v1h12V7z M2,12h8v-1H2V12z M2,16h8v-1H2V16z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to playlist</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-grey card-small-text">
+                                        <span>The Prince</span>
+                                        <div class="d-flex align-items-center">
+                                            <span class="card-view">92 lakh views</span>
+                                            <span class="card-time ms-2">8 months
+                                                ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-flex w-100">
+                            <div class="rlted-video p-1">
+                                <div>
+                                    <div id="video-image_1" class="video-image">
+                                        <img id="img" class="video-css-grid pointer d-flex" alt=""
+                                            src="../assets/images/subscription/sonymusicimg.webp">
+                                        <div id="text" class="video-timer d-flex p-1 fade-in"
+                                            aria-label="11 minutes, 7 seconds">
+                                            11:07</div>
+                                    </div>
+                                    <div class="video-thumbnail">
+                                        <img id="thumbnail" class="video-css-grid pointer fade-in" alt=""
+                                            src="../assets/images/subscription/sonymusicvideo.webp">
+                                        <div id="addtoqueue1" class="addtoqueue">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="queuetooltip1" class="queuetooltip">Add To
+                                                Queue</span>
+                                        </div>
+                                        <div id="watchlater1" class="watchlater">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="watchtooltip1" class="watchtooltip">Watch
+                                                Later</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex">
+                                        <div class="d-flex">
+                                            <p routerLink="/dashboard/watch/video" class="card-text">Make a Coin Save
+                                                Bank with cardboard #shorts</p>
+                                        </div>
+                                        <div class="d-flex dropdown">
+                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-ellipsis-v"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-liked"
+                                                aria-labelledby="dropdownMenuButton">
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Add to queue</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to Watch Later</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="ri-menu-add-fill ms-2 mt-2"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M22,13h-4v4h-2v-4h-4v-2h4V7h2v4h4V13z M14,7H2v1h12V7z M2,12h8v-1H2V12z M2,16h8v-1H2V16z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to playlist</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-grey card-small-text">
+                                        <span>The Prince</span>
+                                        <div class="d-flex align-items-center">
+                                            <span class="card-view">92 lakh views</span>
+                                            <span class="card-time ms-2">8 months
+                                                ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-flex w-100">
+                            <div class="rlted-video p-1">
+                                <div>
+                                    <div id="video-image_1" class="video-image">
+                                        <img id="img" class="video-css-grid pointer d-flex" alt=""
+                                            src="../assets/images/subscription/sonytalentimg.webp">
+                                        <div id="text" class="video-timer d-flex p-1 fade-in"
+                                            aria-label="11 minutes, 7 seconds">
+                                            11:07</div>
+                                    </div>
+                                    <div class="video-thumbnail">
+                                        <img id="thumbnail" class="video-css-grid pointer fade-in" alt=""
+                                            src="../assets/images/subscription/sonytalentvideo.webp">
+                                        <div id="addtoqueue1" class="addtoqueue">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="queuetooltip1" class="queuetooltip">Add To
+                                                Queue</span>
+                                        </div>
+                                        <div id="watchlater1" class="watchlater">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="watchtooltip1" class="watchtooltip">Watch
+                                                Later</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex">
+                                        <div class="d-flex">
+                                            <p routerLink="/dashboard/watch/video" class="card-text">Make a Coin Save
+                                                Bank with cardboard #shorts</p>
+                                        </div>
+                                        <div class="d-flex dropdown">
+                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-ellipsis-v"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-liked"
+                                                aria-labelledby="dropdownMenuButton">
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Add to queue</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to Watch Later</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="ri-menu-add-fill ms-2 mt-2"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M22,13h-4v4h-2v-4h-4v-2h4V7h2v4h4V13z M14,7H2v1h12V7z M2,12h8v-1H2V12z M2,16h8v-1H2V16z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to playlist</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-grey card-small-text">
+                                        <span>The Prince</span>
+                                        <div class="d-flex align-items-center">
+                                            <span class="card-view">92 lakh views</span>
+                                            <span class="card-time ms-2">8 months
+                                                ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-flex w-100">
+                            <div class="rlted-video p-1">
+                                <div>
+                                    <div id="video-image_1" class="video-image">
+                                        <img id="img" class="video-css-grid pointer d-flex" alt=""
+                                            src="../assets/images/subscription/sonyvideoimg.jpg">
+                                        <div id="text" class="video-timer d-flex p-1 fade-in"
+                                            aria-label="11 minutes, 7 seconds">
+                                            11:07</div>
+                                    </div>
+                                    <div class="video-thumbnail">
+                                        <img id="thumbnail" class="video-css-grid pointer fade-in" alt=""
+                                            src="../assets/images/subscription/sonyvideo.webp">
+                                        <div id="addtoqueue1" class="addtoqueue">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="queuetooltip1" class="queuetooltip">Add To
+                                                Queue</span>
+                                        </div>
+                                        <div id="watchlater1" class="watchlater">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="watchtooltip1" class="watchtooltip">Watch
+                                                Later</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex">
+                                        <div class="d-flex">
+                                            <p routerLink="/dashboard/watch/video" class="card-text">Make a Coin Save
+                                                Bank with cardboard #shorts</p>
+                                        </div>
+                                        <div class="d-flex dropdown">
+                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-ellipsis-v"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-liked"
+                                                aria-labelledby="dropdownMenuButton">
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Add to queue</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to Watch Later</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="ri-menu-add-fill ms-2 mt-2"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M22,13h-4v4h-2v-4h-4v-2h4V7h2v4h4V13z M14,7H2v1h12V7z M2,12h8v-1H2V12z M2,16h8v-1H2V16z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to playlist</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-grey card-small-text">
+                                        <span>The Prince</span>
+                                        <div class="d-flex align-items-center">
+                                            <span class="card-view">92 lakh views</span>
+                                            <span class="card-time ms-2">8 months
+                                                ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between res-d-block">
+                        <div class="col-flex w-100">
+                            <div class="rlted-video p-1">
+                                <div>
+                                    <div id="video-image_1" class="video-image">
+                                        <img id="img" class="video-css-grid pointer d-flex" alt=""
+                                            src="../assets/images/subscription/sonyvideoimg.jpg">
+                                        <div id="text" class="video-timer d-flex p-1 fade-in"
+                                            aria-label="11 minutes, 7 seconds">
+                                            11:07</div>
+                                    </div>
+                                    <div class="video-thumbnail">
+                                        <img id="thumbnail" class="video-css-grid pointer fade-in" alt=""
+                                            src="../assets/images/subscription/sonyvideo.webp">
+                                        <div id="addtoqueue1" class="addtoqueue">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="queuetooltip1" class="queuetooltip">Add To
+                                                Queue</span>
+                                        </div>
+                                        <div id="watchlater1" class="watchlater">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="watchtooltip1" class="watchtooltip">Watch
+                                                Later</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex">
+                                        <div class="d-flex">
+                                            <p routerLink="/dashboard/watch/video" class="card-text">Make a Coin Save
+                                                Bank with cardboard #shorts</p>
+                                        </div>
+                                        <div class="d-flex dropdown">
+                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-ellipsis-v"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-liked"
+                                                aria-labelledby="dropdownMenuButton">
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Add to queue</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to Watch Later</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="ri-menu-add-fill ms-2 mt-2"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M22,13h-4v4h-2v-4h-4v-2h4V7h2v4h4V13z M14,7H2v1h12V7z M2,12h8v-1H2V12z M2,16h8v-1H2V16z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to playlist</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-grey card-small-text">
+                                        <span>The Prince</span>
+                                        <div class="d-flex align-items-center">
+                                            <span class="card-view">92 lakh views</span>
+                                            <span class="card-time ms-2">8 months
+                                                ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-flex w-100">
+                            <div class="rlted-video p-1">
+                                <div>
+                                    <div id="video-image_1" class="video-image">
+                                        <img id="img" class="video-css-grid pointer d-flex" alt=""
+                                            src="../assets/images/subscription/sonymusicimg.webp">
+                                        <div id="text" class="video-timer d-flex p-1 fade-in"
+                                            aria-label="11 minutes, 7 seconds">
+                                            11:07</div>
+                                    </div>
+                                    <div class="video-thumbnail">
+                                        <img id="thumbnail" class="video-css-grid pointer fade-in" alt=""
+                                            src="../assets/images/subscription/sonymusicvideo.webp">
+                                        <div id="addtoqueue1" class="addtoqueue">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="queuetooltip1" class="queuetooltip">Add To
+                                                Queue</span>
+                                        </div>
+                                        <div id="watchlater1" class="watchlater">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="watchtooltip1" class="watchtooltip">Watch
+                                                Later</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex">
+                                        <div class="d-flex">
+                                            <p routerLink="/dashboard/watch/video" class="card-text">Make a Coin Save
+                                                Bank with cardboard #shorts</p>
+                                        </div>
+                                        <div class="d-flex dropdown">
+                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-ellipsis-v"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-liked"
+                                                aria-labelledby="dropdownMenuButton">
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Add to queue</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to Watch Later</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="ri-menu-add-fill ms-2 mt-2"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M22,13h-4v4h-2v-4h-4v-2h4V7h2v4h4V13z M14,7H2v1h12V7z M2,12h8v-1H2V12z M2,16h8v-1H2V16z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to playlist</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-grey card-small-text">
+                                        <span>The Prince</span>
+                                        <div class="d-flex align-items-center">
+                                            <span class="card-view">92 lakh views</span>
+                                            <span class="card-time ms-2">8 months
+                                                ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-flex w-100">
+                            <div class="rlted-video p-1">
+                                <div>
+                                    <div id="video-image_1" class="video-image">
+                                        <img id="img" class="video-css-grid pointer d-flex" alt=""
+                                            src="../assets/images/subscription/sonytalentimg.webp">
+                                        <div id="text" class="video-timer d-flex p-1 fade-in"
+                                            aria-label="11 minutes, 7 seconds">
+                                            11:07</div>
+                                    </div>
+                                    <div class="video-thumbnail">
+                                        <img id="thumbnail" class="video-css-grid pointer fade-in" alt=""
+                                            src="../assets/images/subscription/sonytalentvideo.webp">
+                                        <div id="addtoqueue1" class="addtoqueue">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="queuetooltip1" class="queuetooltip">Add To
+                                                Queue</span>
+                                        </div>
+                                        <div id="watchlater1" class="watchlater">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="watchtooltip1" class="watchtooltip">Watch
+                                                Later</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex">
+                                        <div class="d-flex">
+                                            <p routerLink="/dashboard/watch/video" class="card-text">Make a Coin Save
+                                                Bank with cardboard #shorts</p>
+                                        </div>
+                                        <div class="d-flex dropdown">
+                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-ellipsis-v"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-liked"
+                                                aria-labelledby="dropdownMenuButton">
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Add to queue</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to Watch Later</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="ri-menu-add-fill ms-2 mt-2"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M22,13h-4v4h-2v-4h-4v-2h4V7h2v4h4V13z M14,7H2v1h12V7z M2,12h8v-1H2V12z M2,16h8v-1H2V16z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to playlist</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-grey card-small-text">
+                                        <span>The Prince</span>
+                                        <div class="d-flex align-items-center">
+                                            <span class="card-view">92 lakh views</span>
+                                            <span class="card-time ms-2">8 months
+                                                ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-flex w-100">
+                            <div class="rlted-video p-1">
+                                <div>
+                                    <div id="video-image_1" class="video-image">
+                                        <img id="img" class="video-css-grid pointer d-flex" alt=""
+                                            src="../assets/images/subscription/sonydanceimg.webp">
+                                        <div id="text" class="video-timer d-flex p-1 fade-in"
+                                            aria-label="11 minutes, 7 seconds">
+                                            11:07</div>
+                                    </div>
+                                    <div class="video-thumbnail">
+                                        <img id="thumbnail" class="video-css-grid pointer fade-in" alt=""
+                                            src="../assets/images/subscription/sonydancevideo.webp">
+                                        <div id="addtoqueue1" class="addtoqueue">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="queuetooltip1" class="queuetooltip">Add To
+                                                Queue</span>
+                                        </div>
+                                        <div id="watchlater1" class="watchlater">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="watchtooltip1" class="watchtooltip">Watch
+                                                Later</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex">
+                                        <div class="d-flex">
+                                            <p routerLink="/dashboard/watch/video" class="card-text">Make a Coin Save
+                                                Bank with cardboard #shorts</p>
+                                        </div>
+                                        <div class="d-flex dropdown">
+                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-ellipsis-v"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-liked"
+                                                aria-labelledby="dropdownMenuButton">
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Add to queue</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to Watch Later</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="ri-menu-add-fill ms-2 mt-2"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M22,13h-4v4h-2v-4h-4v-2h4V7h2v4h4V13z M14,7H2v1h12V7z M2,12h8v-1H2V12z M2,16h8v-1H2V16z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to playlist</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-grey card-small-text">
+                                        <span>The Prince</span>
+                                        <div class="d-flex align-items-center">
+                                            <span class="card-view">92 lakh views</span>
+                                            <span class="card-time ms-2">8 months
+                                                ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-flex w-100">
+                            <div class="rlted-video p-1">
+                                <div>
+                                    <div id="video-image_1" class="video-image">
+                                        <img id="img" class="video-css-grid pointer d-flex" alt=""
+                                            src="../assets/images/explore/video-image.jpg">
+                                        <div id="text" class="video-timer d-flex p-1 fade-in"
+                                            aria-label="11 minutes, 7 seconds">
+                                            11:07</div>
+                                    </div>
+                                    <div class="video-thumbnail">
+                                        <img id="thumbnail" class="video-css-grid pointer fade-in" alt=""
+                                            src="../assets/images/explore/video-thumbnail.webp">
+                                        <div id="addtoqueue1" class="addtoqueue">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="queuetooltip1" class="queuetooltip">Add To
+                                                Queue</span>
+                                        </div>
+                                        <div id="watchlater1" class="watchlater">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="watchtooltip1" class="watchtooltip">Watch
+                                                Later</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex">
+                                        <div class="d-flex">
+                                            <p routerLink="/dashboard/watch/video" class="card-text">Make a Coin Save
+                                                Bank with cardboard #shorts</p>
+                                        </div>
+                                        <div class="d-flex dropdown">
+                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-ellipsis-v"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-liked"
+                                                aria-labelledby="dropdownMenuButton">
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Add to queue</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to Watch Later</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="ri-menu-add-fill ms-2 mt-2"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M22,13h-4v4h-2v-4h-4v-2h4V7h2v4h4V13z M14,7H2v1h12V7z M2,12h8v-1H2V12z M2,16h8v-1H2V16z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to playlist</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-grey card-small-text">
+                                        <span>The Prince</span>
+                                        <div class="d-flex align-items-center">
+                                            <span class="card-view">92 lakh views</span>
+                                            <span class="card-time ms-2">8 months
+                                                ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between res-d-block">
+                        <div class="col-flex w-100">
+                            <div class="rlted-video p-1">
+                                <div>
+                                    <div id="video-image_1" class="video-image">
+                                        <img id="img" class="video-css-grid pointer d-flex" alt=""
+                                            src="../assets/images/subscription/kapilimg.webp">
+                                        <div id="text" class="video-timer d-flex p-1 fade-in"
+                                            aria-label="11 minutes, 7 seconds">
+                                            11:07</div>
+                                    </div>
+                                    <div class="video-thumbnail">
+                                        <img id="thumbnail" class="video-css-grid pointer fade-in" alt=""
+                                            src="../assets/images/subscription/kapilvideo.webp">
+                                        <div id="addtoqueue1" class="addtoqueue">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="queuetooltip1" class="queuetooltip">Add To
+                                                Queue</span>
+                                        </div>
+                                        <div id="watchlater1" class="watchlater">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="watchtooltip1" class="watchtooltip">Watch
+                                                Later</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex">
+                                        <div class="d-flex">
+                                            <p routerLink="/dashboard/watch/video" class="card-text">Make a Coin Save
+                                                Bank with cardboard #shorts</p>
+                                        </div>
+                                        <div class="d-flex dropdown">
+                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-ellipsis-v"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-liked"
+                                                aria-labelledby="dropdownMenuButton">
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Add to queue</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to Watch Later</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="ri-menu-add-fill ms-2 mt-2"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M22,13h-4v4h-2v-4h-4v-2h4V7h2v4h4V13z M14,7H2v1h12V7z M2,12h8v-1H2V12z M2,16h8v-1H2V16z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to playlist</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-grey card-small-text">
+                                        <span>The Prince</span>
+                                        <div class="d-flex align-items-center">
+                                            <span class="card-view">92 lakh views</span>
+                                            <span class="card-time ms-2">8 months
+                                                ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-flex w-100">
+                            <div class="rlted-video p-1">
+                                <div>
+                                    <div id="video-image_1" class="video-image">
+                                        <img id="img" class="video-css-grid pointer d-flex" alt=""
+                                            src="../assets/images/subscription/indiaidolimg.webp">
+                                        <div id="text" class="video-timer d-flex p-1 fade-in"
+                                            aria-label="11 minutes, 7 seconds">
+                                            11:07</div>
+                                    </div>
+                                    <div class="video-thumbnail">
+                                        <img id="thumbnail" class="video-css-grid pointer fade-in" alt=""
+                                            src="../assets/images/subscription/indiaidolimg.webp">
+                                        <div id="addtoqueue1" class="addtoqueue">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="queuetooltip1" class="queuetooltip">Add To
+                                                Queue</span>
+                                        </div>
+                                        <div id="watchlater1" class="watchlater">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="watchtooltip1" class="watchtooltip">Watch
+                                                Later</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex">
+                                        <div class="d-flex">
+                                            <p routerLink="/dashboard/watch/video" class="card-text">Make a Coin Save
+                                                Bank with cardboard #shorts</p>
+                                        </div>
+                                        <div class="d-flex dropdown">
+                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-ellipsis-v"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-liked"
+                                                aria-labelledby="dropdownMenuButton">
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Add to queue</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to Watch Later</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="ri-menu-add-fill ms-2 mt-2"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M22,13h-4v4h-2v-4h-4v-2h4V7h2v4h4V13z M14,7H2v1h12V7z M2,12h8v-1H2V12z M2,16h8v-1H2V16z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to playlist</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-grey card-small-text">
+                                        <span>The Prince</span>
+                                        <div class="d-flex align-items-center">
+                                            <span class="card-view">92 lakh views</span>
+                                            <span class="card-time ms-2">8 months
+                                                ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-flex w-100">
+                            <div class="rlted-video p-1">
+                                <div>
+                                    <div id="video-image_1" class="video-image">
+                                        <img id="img" class="video-css-grid pointer d-flex" alt=""
+                                            src="../assets/images/subscription/sonytalentimg.webp">
+                                        <div id="text" class="video-timer d-flex p-1 fade-in"
+                                            aria-label="11 minutes, 7 seconds">
+                                            11:07</div>
+                                    </div>
+                                    <div class="video-thumbnail">
+                                        <img id="thumbnail" class="video-css-grid pointer fade-in" alt=""
+                                            src="../assets/images/subscription/sonytalentvideo.webp">
+                                        <div id="addtoqueue1" class="addtoqueue">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="queuetooltip1" class="queuetooltip">Add To
+                                                Queue</span>
+                                        </div>
+                                        <div id="watchlater1" class="watchlater">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="watchtooltip1" class="watchtooltip">Watch
+                                                Later</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex">
+                                        <div class="d-flex">
+                                            <p routerLink="/dashboard/watch/video" class="card-text">Make a Coin Save
+                                                Bank with cardboard #shorts</p>
+                                        </div>
+                                        <div class="d-flex dropdown">
+                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-ellipsis-v"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-liked"
+                                                aria-labelledby="dropdownMenuButton">
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Add to queue</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to Watch Later</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="ri-menu-add-fill ms-2 mt-2"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M22,13h-4v4h-2v-4h-4v-2h4V7h2v4h4V13z M14,7H2v1h12V7z M2,12h8v-1H2V12z M2,16h8v-1H2V16z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to playlist</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-grey card-small-text">
+                                        <span>The Prince</span>
+                                        <div class="d-flex align-items-center">
+                                            <span class="card-view">92 lakh views</span>
+                                            <span class="card-time ms-2">8 months
+                                                ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-flex w-100">
+                            <div class="rlted-video p-1">
+                                <div>
+                                    <div id="video-image_1" class="video-image">
+                                        <img id="img" class="video-css-grid pointer d-flex" alt=""
+                                            src="../assets/images/subscription/sonydanceimg.webp">
+                                        <div id="text" class="video-timer d-flex p-1 fade-in"
+                                            aria-label="11 minutes, 7 seconds">
+                                            11:07</div>
+                                    </div>
+                                    <div class="video-thumbnail">
+                                        <img id="thumbnail" class="video-css-grid pointer fade-in" alt=""
+                                            src="../assets/images/subscription/sonydancevideo.webp">
+                                        <div id="addtoqueue1" class="addtoqueue">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="queuetooltip1" class="queuetooltip">Add To
+                                                Queue</span>
+                                        </div>
+                                        <div id="watchlater1" class="watchlater">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="watchtooltip1" class="watchtooltip">Watch
+                                                Later</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex">
+                                        <div class="d-flex">
+                                            <p routerLink="/dashboard/watch/video" class="card-text">Make a Coin Save
+                                                Bank with cardboard #shorts</p>
+                                        </div>
+                                        <div class="d-flex dropdown">
+                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-ellipsis-v"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-liked"
+                                                aria-labelledby="dropdownMenuButton">
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Add to queue</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to Watch Later</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="ri-menu-add-fill ms-2 mt-2"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M22,13h-4v4h-2v-4h-4v-2h4V7h2v4h4V13z M14,7H2v1h12V7z M2,12h8v-1H2V12z M2,16h8v-1H2V16z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to playlist</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-grey card-small-text">
+                                        <span>The Prince</span>
+                                        <div class="d-flex align-items-center">
+                                            <span class="card-view">92 lakh views</span>
+                                            <span class="card-time ms-2">8 months
+                                                ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-flex w-100">
+                            <div class="rlted-video p-1">
+                                <div>
+                                    <div id="video-image_1" class="video-image">
+                                        <img id="img" class="video-css-grid pointer d-flex" alt=""
+                                            src="../assets/images/subscription/singerimg.webp">
+                                        <div id="text" class="video-timer d-flex p-1 fade-in"
+                                            aria-label="11 minutes, 7 seconds">
+                                            11:07</div>
+                                    </div>
+                                    <div class="video-thumbnail">
+                                        <img id="thumbnail" class="video-css-grid pointer fade-in" alt=""
+                                            src="../assets/images/subscription/musicvideo.webp">
+                                        <div id="addtoqueue1" class="addtoqueue">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="queuetooltip1" class="queuetooltip">Add To
+                                                Queue</span>
+                                        </div>
+                                        <div id="watchlater1" class="watchlater">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="watchtooltip1" class="watchtooltip">Watch
+                                                Later</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex">
+                                        <div class="d-flex">
+                                            <p routerLink="/dashboard/watch/video" class="card-text">Make a Coin Save
+                                                Bank with cardboard #shorts</p>
+                                        </div>
+                                        <div class="d-flex dropdown">
+                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fa fa-ellipsis-v"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-liked"
+                                                aria-labelledby="dropdownMenuButton">
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Add to queue</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to Watch Later</a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <!-- <i class="ri-menu-add-fill ms-2 mt-2"></i> -->
+                                                    <a class="dropdown-item" href="#">
+                                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                            focusable="false" class="style-scope yt-icon">
+                                                            <g class="style-scope yt-icon">
+                                                                <path
+                                                                    d="M22,13h-4v4h-2v-4h-4v-2h4V7h2v4h4V13z M14,7H2v1h12V7z M2,12h8v-1H2V12z M2,16h8v-1H2V16z"
+                                                                    class="style-scope yt-icon"></path>
+                                                            </g>
+                                                        </svg>
+                                                        Save to playlist</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-grey card-small-text">
+                                        <span>The Prince</span>
+                                        <div class="d-flex align-items-center">
+                                            <span class="card-view">92 lakh views</span>
+                                            <span class="card-time ms-2">8 months
+                                                ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- GRID TAB END -->
+
+                <!-- LIST TAB START -->
+                <div *ngIf="isList">
+                    <div class="col-flex w-100 res-7-block">
+                        <div class="rlted-video d-flex">
+                            <div class="video-container">
+                                <div id="video-image_1" class="video-image">
+                                    <img id="img" class="video-css pointer d-flex" alt=""
+                                        src="../assets/images/subscription/sonyvideoimg.jpg">
+                                    <div id="text" class="video-timer d-flex p-1 fade-in"
+                                        aria-label="11 minutes, 7 seconds">11:07
+                                    </div>
+                                </div>
+                                <div class="video-thumbnail">
+                                    <img id="thumbnail" class="video-css pointer fade-in" alt=""
+                                        src="../assets/images/subscription/sonyvideo.webp">
+                                    <div id="addtoqueue1" class="addtoqueue">
+                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                            class="style-scope yt-icon">
+                                            <g class="style-scope yt-icon">
+                                                <path
+                                                    d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                    class="style-scope yt-icon"></path>
+                                            </g>
+                                        </svg>
+                                        <span id="queuetooltip1" class="queuetooltip">Add To Queue</span>
+                                    </div>
+                                    <div id="watchlater1" class="watchlater">
+                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                            class="style-scope yt-icon">
+                                            <g class="style-scope yt-icon">
+                                                <path
+                                                    d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                    class="style-scope yt-icon"></path>
+                                            </g>
+                                        </svg>
+                                        <span id="watchtooltip1" class="watchtooltip">Watch Later</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tube-pst-meta ms-3">
+                                <div class="d-flex justify-content-between">
+                                    <h2>The Kapil Sharma Show | Kapil Ne Gaya "Deepika" Ke Liye
+                                        Apna Favorite Gaana | Best Moments</h2>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <div class="d-flex">
+                                                <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                <a class="dropdown-item" href="#">
+                                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                        focusable="false" class="style-scope yt-icon">
+                                                        <g class="style-scope yt-icon">
+                                                            <path
+                                                                d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                                class="style-scope yt-icon"></path>
+                                                        </g>
+                                                    </svg>
+                                                    Add to queue</a>
+                                            </div>
+                                            <div class="d-flex">
+                                                <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                <a class="dropdown-item" href="#">
+                                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                        focusable="false" class="style-scope yt-icon">
+                                                        <g class="style-scope yt-icon">
+                                                            <path
+                                                                d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                                class="style-scope yt-icon"></path>
+                                                        </g>
+                                                    </svg>
+                                                    Save to Watch Later</a>
+                                            </div>
+                                            <div class="d-flex">
+                                                <!-- <i class="ri-menu-add-fill ms-2 mt-2"></i> -->
+                                                <a class="dropdown-item" href="#">
+                                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                        focusable="false" class="style-scope yt-icon">
+                                                        <g class="style-scope yt-icon">
+                                                            <path
+                                                                d="M22,13h-4v4h-2v-4h-4v-2h4V7h2v4h4V13z M14,7H2v1h12V7z M2,12h8v-1H2V12z M2,16h8v-1H2V16z"
+                                                                class="style-scope yt-icon"></path>
+                                                        </g>
+                                                    </svg>
+                                                    Save to playlist</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="align-items-center">
+                                    <div class="d-flex">
+                                        <span class="d-block">SET India</span>
+                                        <span id="verified_1" class="d-block ms-1 pointer verified">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon"
+                                                style="width: 14px; height: 14px;">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M12,2C6.5,2,2,6.5,2,12c0,5.5,4.5,10,10,10s10-4.5,10-10C22,6.5,17.5,2,12,2z M9.8,17.3l-4.2-4.1L7,11.8l2.8,2.7L17,7.4 l1.4,1.4L9.8,17.3z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="verifiedtooltip1" class="verifiedtooltip">Verified</span>
+                                        </span>
+                                        <span class="d-block ms-2">2.2k views.</span>
+                                        <span class="d-block ms-2">12 hours ago</span>
+                                    </div>
+                                </div>
+                                <p class="mt-1">Click here to Subscribe to SET India:
+                                    https://www.youtube.com/channel/UCpEhnqL0y41EpW2TvWAHD7Q?sub_confirmation=1
+
+                                    Watch the specially curated musical clips from The Kapil Sharma Show:
+                                    https://www...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="mt-2 mb-3">
+
+                    <div class="col-flex w-100 res-7-block">
+                        <div class="rlted-video d-flex">
+                            <div>
+                                <div id="video-image_2" class="video-image">
+                                    <img id="img" class="video-css pointer d-flex" alt=""
+                                        src="../assets/images/subscription/sonydanceimg.webp">
+                                    <div id="text" class="video-timer d-flex p-1 fade-in"
+                                        aria-label="11 minutes, 7 seconds">11:07
+                                    </div>
+                                </div>
+                                <div class="video-thumbnail">
+                                    <img id="thumbnail" class="video-css pointer fade-in" alt=""
+                                        src="../assets/images/subscription/sonydancevideo.webp">
+                                    <div id="addtoqueue2" class="addtoqueue">
+                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                            class="style-scope yt-icon">
+                                            <g class="style-scope yt-icon">
+                                                <path
+                                                    d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                    class="style-scope yt-icon"></path>
+                                            </g>
+                                        </svg>
+                                        <span id="queuetooltip2" class="queuetooltip">Add To Queue</span>
+                                    </div>
+                                    <div id="watchlater2" class="watchlater">
+                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                            class="style-scope yt-icon">
+                                            <g class="style-scope yt-icon">
+                                                <path
+                                                    d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                    class="style-scope yt-icon"></path>
+                                            </g>
+                                        </svg>
+                                        <span id="watchtooltip2" class="watchtooltip">Watch Later</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tube-pst-meta ms-3">
+                                <div class="d-flex justify-content-between">
+                                    <h2>क्यों Geeta Maa इस Performance को देखर हो गई Speechless? | Super Dancer | Anurag
+                                        Basu | Step Up</h2>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <div class="d-flex">
+                                                <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                <a class="dropdown-item" href="#">
+                                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                        focusable="false" class="style-scope yt-icon">
+                                                        <g class="style-scope yt-icon">
+                                                            <path
+                                                                d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                                class="style-scope yt-icon"></path>
+                                                        </g>
+                                                    </svg>
+                                                    Add to queue</a>
+                                            </div>
+                                            <div class="d-flex">
+                                                <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                <a class="dropdown-item" href="#">
+                                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                        focusable="false" class="style-scope yt-icon">
+                                                        <g class="style-scope yt-icon">
+                                                            <path
+                                                                d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                                class="style-scope yt-icon"></path>
+                                                        </g>
+                                                    </svg>
+                                                    Save to Watch Later</a>
+                                            </div>
+                                            <div class="d-flex">
+                                                <!-- <i class="ri-menu-add-fill ms-2 mt-2"></i> -->
+                                                <a class="dropdown-item" href="#">
+                                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                        focusable="false" class="style-scope yt-icon">
+                                                        <g class="style-scope yt-icon">
+                                                            <path
+                                                                d="M22,13h-4v4h-2v-4h-4v-2h4V7h2v4h4V13z M14,7H2v1h12V7z M2,12h8v-1H2V12z M2,16h8v-1H2V16z"
+                                                                class="style-scope yt-icon"></path>
+                                                        </g>
+                                                    </svg>
+                                                    Save to playlist</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="align-items-center">
+                                    <div class="d-flex">
+                                        <span class="d-block">SET India</span>
+                                        <span id="verified_2" class="d-block ms-1 pointer verified">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon"
+                                                style="width: 14px; height: 14px;">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M12,2C6.5,2,2,6.5,2,12c0,5.5,4.5,10,10,10s10-4.5,10-10C22,6.5,17.5,2,12,2z M9.8,17.3l-4.2-4.1L7,11.8l2.8,2.7L17,7.4 l1.4,1.4L9.8,17.3z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="verifiedtooltip2" class="verifiedtooltip">Verified</span>
+                                        </span>
+                                        <span class="d-block ms-2">2.2k views.</span>
+                                        <span class="d-block ms-2">12 hours ago</span>
+                                    </div>
+                                </div>
+                                <p class="mt-1">Click here to Subscribe to SET India:
+                                    https://www.youtube.com/channel/UCpEhnqL0y41EpW2TvWAHD7Q?sub_confirmation=1
+
+                                    Watch the specially curated musical clips from The Kapil Sharma Show:
+                                    https://www...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="mt-2 mb-3">
+
+                    <div class="col-flex w-100 res-7-block">
+                        <div class="rlted-video d-flex">
+                            <div>
+                                <div id="video-image_3" class="video-image">
+                                    <img id="img" class="video-css pointer d-flex" alt=""
+                                        src="../assets/images/subscription/sonymusicimg.webp">
+                                    <div id="text" class="video-timer d-flex p-1 fade-in"
+                                        aria-label="11 minutes, 7 seconds">11:07
+                                    </div>
+                                </div>
+                                <div class="video-thumbnail">
+                                    <img id="thumbnail" class="video-css pointer fade-in" alt=""
+                                        src="../assets/images/subscription/sonymusicvideo.webp">
+                                    <div id="addtoqueue3" class="addtoqueue">
+                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                            class="style-scope yt-icon">
+                                            <g class="style-scope yt-icon">
+                                                <path
+                                                    d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                    class="style-scope yt-icon"></path>
+                                            </g>
+                                        </svg>
+                                        <span id="queuetooltip3" class="queuetooltip">Add To Queue</span>
+                                    </div>
+                                    <div id="watchlater3" class="watchlater">
+                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                            class="style-scope yt-icon">
+                                            <g class="style-scope yt-icon">
+                                                <path
+                                                    d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                    class="style-scope yt-icon"></path>
+                                            </g>
+                                        </svg>
+                                        <span id="watchtooltip3" class="watchtooltip">Watch Later</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tube-pst-meta ms-3">
+                                <div class="d-flex justify-content-between">
+                                    <h2>Divyansh-Manuraj ने किया Dharam जी के लिए Perform | India's Got Talent Season 9|
+                                        Mind Blowing Series</h2>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <div class="d-flex">
+                                                <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                <a class="dropdown-item" href="#">
+                                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                        focusable="false" class="style-scope yt-icon">
+                                                        <g class="style-scope yt-icon">
+                                                            <path
+                                                                d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                                class="style-scope yt-icon"></path>
+                                                        </g>
+                                                    </svg>
+                                                    Add to queue</a>
+                                            </div>
+                                            <div class="d-flex">
+                                                <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                <a class="dropdown-item" href="#">
+                                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                        focusable="false" class="style-scope yt-icon">
+                                                        <g class="style-scope yt-icon">
+                                                            <path
+                                                                d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                                class="style-scope yt-icon"></path>
+                                                        </g>
+                                                    </svg>
+                                                    Save to Watch Later</a>
+                                            </div>
+                                            <div class="d-flex">
+                                                <!-- <i class="ri-menu-add-fill ms-2 mt-2"></i> -->
+                                                <a class="dropdown-item" href="#">
+                                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                        focusable="false" class="style-scope yt-icon">
+                                                        <g class="style-scope yt-icon">
+                                                            <path
+                                                                d="M22,13h-4v4h-2v-4h-4v-2h4V7h2v4h4V13z M14,7H2v1h12V7z M2,12h8v-1H2V12z M2,16h8v-1H2V16z"
+                                                                class="style-scope yt-icon"></path>
+                                                        </g>
+                                                    </svg>
+                                                    Save to playlist</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="align-items-center">
+                                    <div class="d-flex">
+                                        <span class="d-block">SET India</span>
+                                        <span id="verified_3" class="d-block ms-1 pointer verified">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon"
+                                                style="width: 14px; height: 14px;">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M12,2C6.5,2,2,6.5,2,12c0,5.5,4.5,10,10,10s10-4.5,10-10C22,6.5,17.5,2,12,2z M9.8,17.3l-4.2-4.1L7,11.8l2.8,2.7L17,7.4 l1.4,1.4L9.8,17.3z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="verifiedtooltip3" class="verifiedtooltip">Verified</span>
+                                        </span>
+                                        <span class="d-block ms-2">2.2k views.</span>
+                                        <span class="d-block ms-2">12 hours ago</span>
+                                    </div>
+                                </div>
+                                <p class="mt-1">Click here to Subscribe to SET India:
+                                    https://www.youtube.com/channel/UCpEhnqL0y41EpW2TvWAHD7Q?sub_confirmation=1
+
+                                    Watch the specially curated musical clips from The Kapil Sharma Show:
+                                    https://www...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="mt-2 mb-3">
+
+                    <div class="col-flex w-100 res-7-block">
+                        <div class="rlted-video d-flex">
+                            <div>
+                                <div id="video-image_4" class="video-image">
+                                    <img id="img" class="video-css pointer d-flex" alt=""
+                                        src="../assets/images/subscription/sonytalentimg.webp">
+                                    <div id="text" class="video-timer d-flex p-1 fade-in"
+                                        aria-label="11 minutes, 7 seconds">11:07
+                                    </div>
+                                </div>
+                                <div class="video-thumbnail">
+                                    <img id="thumbnail" class="video-css pointer fade-in" alt=""
+                                        src="../assets/images/subscription/sonytalentvideo.webp">
+                                    <div id="addtoqueue4" class="addtoqueue">
+                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                            class="style-scope yt-icon">
+                                            <g class="style-scope yt-icon">
+                                                <path
+                                                    d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                    class="style-scope yt-icon"></path>
+                                            </g>
+                                        </svg>
+                                        <span id="queuetooltip4" class="queuetooltip">Add To Queue</span>
+                                    </div>
+                                    <div id="watchlater4" class="watchlater">
+                                        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                            class="style-scope yt-icon">
+                                            <g class="style-scope yt-icon">
+                                                <path
+                                                    d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                    class="style-scope yt-icon"></path>
+                                            </g>
+                                        </svg>
+                                        <span id="watchtooltip4" class="watchtooltip">Watch Later</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tube-pst-meta ms-3">
+                                <div class="d-flex justify-content-between">
+                                    <h2>देखिए Traditional Style की Amazing जादूगरी | India's Got Talent Season 3 |
+                                        Magician
+                                        Act</h2>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <div class="d-flex">
+                                                <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                <a class="dropdown-item" href="#">
+                                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                        focusable="false" class="style-scope yt-icon">
+                                                        <g class="style-scope yt-icon">
+                                                            <path
+                                                                d="M21,16h-7v-1h7V16z M21,11H9v1h12V11z M21,7H3v1h18V7z M10,15l-7-4v8L10,15z"
+                                                                class="style-scope yt-icon"></path>
+                                                        </g>
+                                                    </svg>
+                                                    Add to queue</a>
+                                            </div>
+                                            <div class="d-flex">
+                                                <!-- <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i> -->
+                                                <a class="dropdown-item" href="#">
+                                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                        focusable="false" class="style-scope yt-icon">
+                                                        <g class="style-scope yt-icon">
+                                                            <path
+                                                                d="M14.97,16.95L10,13.87V7h2v5.76l4.03,2.49L14.97,16.95z M12,3c-4.96,0-9,4.04-9,9s4.04,9,9,9s9-4.04,9-9S16.96,3,12,3 M12,2c5.52,0,10,4.48,10,10s-4.48,10-10,10S2,17.52,2,12S6.48,2,12,2L12,2z"
+                                                                class="style-scope yt-icon"></path>
+                                                        </g>
+                                                    </svg>
+                                                    Save to Watch Later</a>
+                                            </div>
+                                            <div class="d-flex">
+                                                <!-- <i class="ri-menu-add-fill ms-2 mt-2"></i> -->
+                                                <a class="dropdown-item" href="#">
+                                                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                        focusable="false" class="style-scope yt-icon">
+                                                        <g class="style-scope yt-icon">
+                                                            <path
+                                                                d="M22,13h-4v4h-2v-4h-4v-2h4V7h2v4h4V13z M14,7H2v1h12V7z M2,12h8v-1H2V12z M2,16h8v-1H2V16z"
+                                                                class="style-scope yt-icon"></path>
+                                                        </g>
+                                                    </svg>
+                                                    Save to playlist</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="align-items-center">
+                                    <div class="d-flex">
+                                        <span class="d-block">SET India</span>
+                                        <span id="verified_4" class="d-block ms-1 pointer verified">
+                                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+                                                focusable="false" class="style-scope yt-icon"
+                                                style="width: 14px; height: 14px;">
+                                                <g class="style-scope yt-icon">
+                                                    <path
+                                                        d="M12,2C6.5,2,2,6.5,2,12c0,5.5,4.5,10,10,10s10-4.5,10-10C22,6.5,17.5,2,12,2z M9.8,17.3l-4.2-4.1L7,11.8l2.8,2.7L17,7.4 l1.4,1.4L9.8,17.3z"
+                                                        class="style-scope yt-icon"></path>
+                                                </g>
+                                            </svg>
+                                            <span id="verifiedtooltip4" class="verifiedtooltip">Verified</span>
+                                        </span>
+                                        <span class="d-block ms-2">2.2k views.</span>
+                                        <span class="d-block ms-2">12 hours ago</span>
+                                    </div>
+                                </div>
+                                <p class="mt-1">Click here to Subscribe to SET India:
+                                    https://www.youtube.com/channel/UCpEhnqL0y41EpW2TvWAHD7Q?sub_confirmation=1
+
+                                    Watch the specially curated musical clips from The Kapil Sharma Show:
+                                    https://www...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- LIST TAB END -->
+            </div>
+
+            <!-- MANAGE TAB START -->
+            <div *ngIf="isManage" class="row mt-3">
+                <div class="col-sm-12 manage-box">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="left-box text-end ms-5 ps-5">
+                            <div class="manage">
+                                <img src="/assets/images/subscription/tipsss.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="center-box">
+                            <h2>3 tips</h2>
+                            <span>3 tips3 tips.12 videos</span>
+                            <p>Student. ....want to be a you tuber.🤩</p>
+                        </div>
+                        <div class="right-box">
+                            <div class="d-flex">
+                                <button type="button" class="btn btn-secondary">Subscribed</button>
+                                <i class="fa fa-bell-o fa-2x ms-2" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div class="left-box text-end ms-5 ps-5">
+                            <div class="manage">
+                                <img src="/assets/images/subscription/crafttt.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="center-box">
+                            <h2>5-Minute Crafts</h2>
+                            <span>7.64 crore subscribers</span>
+                            <p>Student. ....want to be a you tuber.🤩</p>
+                        </div>
+                        <div class="right-box">
+                            <div class="d-flex">
+                                <button type="button" class="btn btn-secondary">Subscribed</button>
+                                <i class="fa fa-bell-o fa-2x ms-2" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div class="left-box text-end ms-5 ps-5">
+                            <div class="manage">
+                                <img src="/assets/images/subscription/chennal.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="center-box">
+                            <h2>Colors Rishtey</h2>
+                            <span>100 lakh subscribers•10,323 videos</span>
+                            <p>Student. ....want to be a you tuber.🤩</p>
+                        </div>
+                        <div class="right-box">
+                            <div class="d-flex">
+                                <button type="button" class="btn btn-secondary">Subscribed</button>
+                                <i class="fa fa-bell-o fa-2x ms-2" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <div class="left-box text-end ms-5 ps-5">
+                            <div class="manage">
+                                <img src="/assets/images/subscription/sonyyy.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="center-box">
+                            <h2>SET India</h2>
+                            <span>3 tips3 tips.12 videos</span>
+                            <p>Student. ....want to be a you tuber.🤩</p>
+                        </div>
+                        <div class="right-box">
+                            <div class="d-flex">
+                                <button type="button" class="btn btn-secondary">Subscribed</button>
+                                <i class="fa fa-bell-o fa-2x ms-2" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MANAGE TAB END -->
+        </div>
+
+        <div *ngIf="!isLoggedIn" class="m-5 p-5 w-100 h-100">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <div class="position-absolute top-50 start-50 translate-middle">
+                        <div class="">
+                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                class="style-scope yt-icon" style="width: 120px; height: 120px;">
+                                <g class="style-scope yt-icon">
+                                    <path
+                                        d="M10,18v-6l5,3L10,18z M17,3H7v1h10V3z M20,6H4v1h16V6z M22,9H2v12h20V9z M3,10h18v10H3V10z"
+                                        class="style-scope yt-icon"></path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="notLoginSubText">Don’t miss new videos</div>
+                        <div class="">Sign in to see updates from your favorite YouTube channels</div>
+                        <div class="mt-4">
+                            <button (click)="setSubscriptionLoginIn()" type="button" class="btn btn-link btnSignIn">
+                                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                    class="style-scope yt-icon" style="width: 24px; height: 24px;">
+                                    <g class="style-scope yt-icon">
+                                        <path fill="#065fd4"
+                                            d="M12,2C6.48,2,2,6.48,2,12c0,5.52,4.48,10,10,10s10-4.48,10-10C22,6.48,17.52,2,12,2z M12,3c4.96,0,9,4.04,9,9 c0,1.42-0.34,2.76-0.93,3.96c-1.53-1.72-3.98-2.89-7.38-3.03C14.57,12.6,16,10.97,16,9c0-2.21-1.79-4-4-4C9.79,5,8,6.79,8,9 c0,1.97,1.43,3.6,3.31,3.93c-3.4,0.14-5.85,1.31-7.38,3.03C3.34,14.76,3,13.42,3,12C3,7.04,7.04,3,12,3z M9,9c0-1.65,1.35-3,3-3 s3,1.35,3,3c0,1.65-1.35,3-3,3S9,10.65,9,9z M12,21c-3.16,0-5.94-1.64-7.55-4.12C6.01,14.93,8.61,13.9,12,13.9 c3.39,0,5.99,1.03,7.55,2.98C17.94,19.36,15.16,21,12,21z"
+                                            class="style-scope yt-icon"></path>
+                                    </g>
+                                </svg>
+                                SIGN IN
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

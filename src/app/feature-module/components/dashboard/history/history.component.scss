@@ -1,0 +1,202 @@
+.translate-middle {
+    transform: translate(-100%,-50%)!important;
+}
+
+.notLoginLibText {
+    font-size: 24px;
+    line-height: 3.2rem;
+    font-weight: 400;
+}
+
+.btnSignIn {
+    border: 1px solid #065fd4;
+    text-decoration: none;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+} 
+
+.titleText {
+    font-size: 17px !important;
+    font-weight: normal !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0 !important;
+}
+
+.titleRadio {
+    font-size: 17px !important;
+    font-weight: normal !important;
+    align-items: center;
+    margin-bottom: 0 !important;
+}
+
+.titleIcon {
+    font-size: 17px !important;
+    font-weight: normal !important;
+    align-items: center;
+    margin-bottom: 0 !important;
+}
+
+.manage img {
+    border-radius: 88px;
+    width: 140px;
+    height: 140px;
+}
+
+.rlted-video {
+    overflow: hidden;
+}
+
+.rlted-video:hover .fa-trash-o:before,
+.rlted-video:hover .fa-ellipsis-v:before,
+.rlted-video:hover .fa-times {
+    visibility: visible !important;
+    cursor: pointer;
+}
+
+.rlted-video:hover {
+    background-color: #fbfafa;
+    cursor: pointer;
+}
+
+.dropdown-toggle {
+    visibility: hidden;
+}
+
+.dropdown-menu {
+    position: relative;
+    min-width: auto;
+}
+
+.dropdown-menu {
+    left: inherit !important;
+    right: 0px;
+    transform: translate3d(-25px, 30px, 0px) !important;
+}
+
+.dropdown-menu-liked {
+    min-width: auto;
+    font-size: 12px !important;
+    left: inherit !important;
+    right: 0px !important;
+    transform: translate3d(-30px, -106px, 0px) !important;
+}
+
+.video-div {
+    width: 250px;
+    height: 140px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.video-css {
+    width: 250px;
+    height: 140px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.video-css-grid {
+    width: 210px;
+    height: 120px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.video-image {
+    position: relative;
+}
+
+.video-timer {
+    position: absolute;
+    color: #fff;
+    fill: #fff;
+    background-color: #212121;
+    bottom: 0;
+    right: 0;
+}
+
+.video-thumbnail {
+    position: relative;
+    display: none;
+}
+
+// .video-image:hover {
+//     display: none;
+// }
+
+// .video-image:hover + .video-thumbnail {
+//     display: block;
+// }
+
+.rlted-video:hover .video-image {
+    display: none;
+}
+
+.rlted-video:hover .video-thumbnail {
+    display: block;
+}
+
+.addtoqueue {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    z-index: 99;
+    margin-top: 40px;
+    margin-left: -30px;
+    fill: white;
+    background-color: #212121;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.watchlater {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    z-index: 9;
+    margin-top: 10px;
+    margin-left: -30px;
+    fill: white;
+    background-color: #212121;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.queuetooltip,
+.watchtooltip {
+    visibility: hidden;
+    width: 100px;
+    background-color: #212121;
+    color: #fff;
+    text-align: center;
+    border-radius: 0px;
+    padding: 2px 0;
+    position: absolute;
+    z-index: 999;
+    top: 0px;
+    right: 101%;
+}
+
+.queuetooltip::after,
+.watchtooltip::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+}
+
+.addtoqueue:hover .queuetooltip {
+    visibility: visible;
+}
+
+.watchlater:hover .watchtooltip {
+    visibility: visible;
+}

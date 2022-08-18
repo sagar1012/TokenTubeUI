@@ -1,0 +1,90 @@
+body {
+    background-color: #f9f9f9 !important;
+    height: 100% !important;
+    font-size: 15px;
+}
+
+.card {
+    border: medium none;
+    border-radius: 0;
+    margin-bottom: 5px;
+}
+
+.card-body {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-color: transparent;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+.main {
+    margin-left: 200px;
+    padding: 0px 35px;
+    padding-top: 100px;
+    background-color: #f9f9f9;
+    padding-bottom: 20px;
+}
+
+.tabbing-box .nav-tabs .nav-item.show .nav-link,
+.tabbing-box .nav-tabs .nav-link.active,
+.tabbing-box .nav-tabs .nav-link:hover {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.tabbing-box .nav-tabs .nav-item a {
+    padding: 10px 30px;
+    border-bottom: 2px solid transparent;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.tabbing-box .nav-tabs .nav-item:hover a,
+.tabbing-box .nav-tabs .nav-item .nav-link.active {
+    border-bottom: 2px solid #065fd4;
+}
+
+.upload-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    display: inline-block;
+    background-color: rgb(235, 235, 235);
+}
+
+.upload-icon i {
+    line-height: 100px;
+    font-size: 42px;
+}
+
+.dropdown-menu-liked {
+    position: absolute;
+    transform: none !important;
+    top: 25px !important;
+    left: -50px !important;
+}
+
+.align-icon {
+    border: transparent;
+}

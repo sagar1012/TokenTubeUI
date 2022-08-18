@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h2>Admin Login</h2>
+                </div>
+
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <!-- <label class="form-label" for="emailaddress">Email address</label> -->
+                        <!-- <input formControlName="email" type="email" id="emailaddress" class="form-control" placeholder="Email Address"/> -->
+                        <input formControlName="email" type="email" class="form-control" id="emailaddress" placeholder="Email Address" [ngClass]="{'danger-class': (submitted && f['email'].errors) || (f['email'].errors && f['email'].touched)}" />
+                        <div *ngIf="(submitted && f['email'].errors) || (f['email'].errors && f['email'].touched)" class="invalid-feedback">
+                            <div *ngIf="f['email'].errors['required']"> Email is required</div>
+                        </div>
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                        <!-- <label class="form-label" for="password">Password</label> -->
+                        <!-- <input formControlName="password" type="password" id="password" class="form-control" placeholder="Password" #password_field/> -->
+                        <input #password_field formControlName="password" type="password" class="form-control" id="password" placeholder="Password" [ngClass]="{'danger-class': (submitted && f['password'].errors) || (f['password'].errors && f['password'].touched)}" />
+                        <span (click)="password_field.type=password_field.type=='password'?'text':'password'"
+                            class="fa fa-fw field-icon toggle-password"
+                            [ngClass]="(password_field.type=='password')?' fa-eye-slash':' fa-eye'">
+                        </span>
+                        <div *ngIf="(submitted && f['password'].errors) || (f['password'].errors && f['password'].touched)" class="invalid-feedback">
+                            <div *ngIf="f['password'].errors['required']"> Password is required</div>
+                        </div>
+                    </div>
+
+                    <!-- 1 column grid layout for inline styling -->
+                    <div class="row mb-4">
+                        <div class="col text-right">
+                        <!-- Simple link -->
+                        <a routerLink="/forgotpassword">Forgot Password?</a>
+                        </div>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary btn-block mb-4">LOGIN</button>
+
+                    <!-- Register buttons -->
+                    <div class="text-center">
+                        <!-- <p>Not a member? <a routerLink="/signup">Register</a></p>
+                        <p>or sign up with:</p>
+                        <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fa fa-google" aria-hidden="true"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                        </button> -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>      

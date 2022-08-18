@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="sidebar-">
+    <div class="sidenav bg-white">
+        <div class="profile-img">
+            <img class="img-fluid" src="../../assets/images/u1.jpg" alt="">
+            <div class="mt-2" style="font-size: 16px; color: #585858;"><b>Your channel</b></div>
+            <div style="font-size: 14px; color: rgb(194, 193, 193);">Admin User</div>
+        </div>
+        <hr style="color: lightgray; width: 90%; margin: 10px;">
+
+        <a routerLink="/user/user-dashboard" class="mb-2">
+            <i class="fa fa-tachometer mr-2" aria-hidden="true"></i>
+            Dashboard
+        </a>
+        <a routerLink="/user/user-profile" class="mb-2">
+            <i class="fa fa-clone" aria-hidden="true"></i>
+            Content
+        </a>
+        <a routerLink="/user/user-playlist" class="mb-2">
+            <i class="fa fa-list" aria-hidden="true"></i>
+            Playlists
+        </a>
+
+        <!-- <a href="/playlist" class="mb-2">
+                <i class="fa fa-youtube-play mr-2" aria-hidden="true"></i>
+                Playlists
+            </a> -->
+        <!-- <a href="/video-comments" class="mb-2">
+                <i class="fa fa-comments-o mr-2" aria-hidden="true"></i>
+                Comments
+            </a> -->
+        <a routerLink="/user/personlize" class="mb-2">
+            <i class="fa fa-user-o mr-2" aria-hidden="true"></i>
+            Personlize
+        </a>
+    </div>
+
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+</div>

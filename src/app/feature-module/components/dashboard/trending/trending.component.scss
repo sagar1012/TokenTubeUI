@@ -1,0 +1,246 @@
+.tre-size {
+    font-size: 25px;
+}
+
+.tre-img {
+    background: rgb(237, 236, 236);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.tre-img img {
+    width: 80px;
+}
+
+.tabbing-box .nav-tabs .nav-item.show .nav-link,
+.tabbing-box .nav-tabs .nav-link.active,
+.tabbing-box .nav-tabs .nav-link:hover {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.tabbing-box .nav-tabs .nav-item a {
+    padding: 10px 30px;
+    border-bottom: 2px solid transparent;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.tabbing-box .nav-tabs .nav-item:hover a,
+.tabbing-box .nav-tabs .nav-item .nav-link.active {
+    border-bottom: 2px solid #065fd4;
+}
+
+// .rlted-video {
+//     overflow: hidden;
+// }
+
+.rlted-video:hover .fa-trash-o:before,
+.rlted-video:hover .fa-ellipsis-v:before {
+    visibility: visible !important;
+    cursor: pointer;
+}
+
+.rlted-video:hover {
+    background-color: #fbfafa;
+    cursor: pointer;
+}
+
+.dropdown-toggle {
+    visibility: hidden;
+}
+
+.dropdown-menu {
+    position: relative;
+    min-width: auto;
+}
+
+.dropdown-menu {
+    left: inherit !important;
+    right: 0px;
+    transform: translate3d(-25px, 30px, 0px) !important;
+}
+
+.dropdown-menu-liked {
+    min-width: auto;
+    font-size: 12px !important;
+    left: inherit !important;
+    right: 0px !important;
+    transform: translate3d(-30px, -106px, 0px) !important;
+}
+
+.video-div {
+    width: 250px;
+    height: 140px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.video-css {
+    width: 250px;
+    height: 140px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.video-css-grid {
+    width: 210px;
+    height: 120px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.video-image {
+    position: relative;
+}
+
+.video-timer {
+    position: absolute;
+    color: #fff;
+    fill: #fff;
+    background-color: #212121;
+    bottom: 0;
+    right: 0;
+}
+
+.video-thumbnail {
+    position: relative;
+    display: none;
+}
+
+.rlted-video:hover .video-image {
+    display: none;
+}
+
+.rlted-video:hover .video-thumbnail {
+    display: block;
+}
+
+.addtoqueue {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    z-index: 99;
+    margin-top: 40px;
+    margin-left: -30px;
+    fill: white;
+    background-color: #212121;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.watchlater {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    z-index: 9;
+    margin-top: 10px;
+    margin-left: -30px;
+    fill: white;
+    background-color: #212121;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.queuetooltip,
+.watchtooltip {
+    visibility: hidden;
+    width: 100px;
+    background-color: #212121;
+    color: #fff;
+    text-align: center;
+    border-radius: 0px;
+    padding: 2px 0;
+    position: absolute;
+    z-index: 999;
+    top: 0px;
+    right: 101%;
+}
+
+.queuetooltip::after,
+.watchtooltip::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+}
+
+.addtoqueue:hover .queuetooltip {
+    visibility: visible;
+}
+
+.watchlater:hover .watchtooltip {
+    visibility: visible;
+}
+
+.verifiedtooltip {
+    visibility: hidden;
+    width: 60px;
+    background-color: #212121;
+    color: #fff;
+    text-align: center;
+    border-radius: 0px;
+    padding: 4px 0;
+    position: absolute;
+    z-index: 9999;
+    left: 34%;
+    margin-top: -30px;
+}
+
+.verifiedtooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+}
+
+.verified:hover .verifiedtooltip {
+    visibility: visible;
+}
+
+.notLoginSubText {
+    font-size: 24px;
+    line-height: 3.2rem;
+    font-weight: 400;
+}
+
+.btnSignIn {
+    border: 1px solid #065fd4;
+    text-decoration: none;
+}
+
+.fade-in {
+    animation: fadeIn ease 1s;
+    -webkit-animation: fadeIn ease 1s;
+    -moz-animation: fadeIn ease 1s;
+    -o-animation: fadeIn ease 1s;
+    -ms-animation: fadeIn ease 1s;
+}
+
+.tube-pst-meta p {
+    word-break: break-word;
+}
+
+@media only screen and (max-width: 766px) {
+    .res-ms-0 {
+        margin-left: 0 !important;
+        margin-right: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .res-d-block {
+        display: block !important;
+    }
+
+    .video-css {
+        width: 100%;
+        height: 100%;
+    }
+
+    .tube-pst-meta.ms-3 {
+        margin-left: 0 !important;
+        margin-top: 20px;
+    }
+}

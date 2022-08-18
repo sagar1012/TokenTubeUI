@@ -1,0 +1,101 @@
+<section class="m-5 p-5 mt-3 pt-3 me-0 pe-0" style="overflow: hidden;">
+    <div class="row">
+        <div class="col me-3">
+            <h2 class="font-weight-bold text-6">Tags</h2>
+            <div class="card card-modern">
+                <div class="card-body">
+                    <div class="mt-2">
+                        <div class="">
+                            <div class="row align-items-center mb-3">
+                                <div class="col-12 col-lg-auto mb-3 mb-lg-0">
+                                    <button class="btn btn-outline-primary mb-2 me-2" (click)="openVerticallyCentered(content)">Add Tag</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <table id="dtTags" class="table table-striped mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="th-sm" width="8%">#</th>
+                                    <th class="th-sm" width="28%">Name</th>
+                                    <th class="th-sm" width="38%">Category</th>
+                                    <th class="th-sm" width="30%">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of tagData; index as i;">
+                                    <td><strong>{{ data.id }}</strong></td>
+                                    <td><strong>{{ data.tag_name }}</strong></td>
+                                    <td>{{ data.tag_category }}</td>
+                                    <td>
+                                        <input type="hidden" name="hdntagId" value="{{data.id}}"/>
+                                        <!-- <button type="button" class="btn btn-sm"> -->
+                                            <i (click)="editTag(content, data.id)" class="fa fa-pencil pointer" aria-hidden="true"></i>
+                                            <i (click)="deleteTag(data.id)" class="fa fa-trash text-danger ms-3 pointer" aria-hidden="true"></i>
+                                        <!-- </button> -->
+                                    </td>
+                                </tr>                                                                         
+                            </tbody>
+                        </table>                                   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Add Tags</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="tagForm" (ngSubmit)="tagForms(tagId)" class="we-form" method="post" novalidate="">
+            <div class="form-group row align-items-center mb-3">
+                <label class="col-lg-5 col-xl-3 control-label text-lg-end mb-0">Tag Name</label>
+                <div class="col-lg-7 col-xl-6 w-74">
+                    <input value="{{f['tag_name'].value}}"  formControlName="tag_name" type="text" class="form-control form-control-modern" placeholder="Tag Name"
+                    [ngClass]="{'danger-class': (submitted && f['tag_name'].errors) || (f['tag_name'].errors && f['tag_name'].touched)}">
+                    <div *ngIf="(submitted && f['tag_name'].errors) || (f['tag_name'].errors && f['tag_name'].touched)"
+                                                class="invalid-feedback">
+                                                <div *ngIf="f['tag_name'].errors['required']"> Tag name is
+                                                    required</div>
+                                            </div>
+                </div>
+            </div>
+            <div class="form-group row align-items-center mb-3">
+                <label class="col-lg-5 col-xl-3 control-label text-lg-end mb-0">Tag Category</label>
+                <div class="col-lg-7 col-xl-6 w-74">
+                    <select value="{{f['tag_category'].value}}" class="form-control" formControlName="tag_category" [ngClass]="{'danger-class': (submitted && f['tag_category'].errors) || (f['tag_category'].errors && f['tag_category'].touched) || (f['tag_category'].value == 0 && f['tag_category'].touched)}">
+                        <option selected="selected" value="0">Select Category</option>
+                        <option *ngFor="let option of categoryData" [value]="option.category_name">
+                            {{option.category_name}}
+                        </option>
+                    </select>
+                    <div *ngIf="(submitted && f['tag_category'].value == 0) || (f['tag_category'].value == 0 && f['tag_category'].touched)"
+                                                class="invalid-feedback">
+                                                <div *ngIf="f['tag_category'].value == 0"> Tag category is
+                                                    required</div>
+                                            </div>
+                </div>
+            </div>
+            
+            <div class="row action-buttons mt-5">
+                <div class="col-12 col-md-auto">
+                    <button (click)="modal.close('Close click')" class="btn btn-warning d-flex align-items-center" data-ripple="">
+                        <i class="fa fa-angle-left me-2" aria-hidden="true"></i>
+                        Back to List
+                    </button>
+                   </div>
+                <div class="col-12 col-md-auto ms-md-auto mt-3 mt-md-0 ms-auto">
+                    <button type="submit" class="btn btn-primary d-flex align-items-center" data-ripple="">
+                        <i class="fa fa-floppy-o me-2" aria-hidden="true"></i>
+                        Save Tag
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</ng-template>
+  
+  

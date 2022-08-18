@@ -1,0 +1,749 @@
+<section style="overflow: hidden;">
+    <div class="gap2">
+        <div class="container">
+            <div class="row" id="page-contents">
+                <div class="col-lg-7">
+                    <div class="pittube-video">
+                        <div class="video-frame">
+                            <video id="video" style="height: auto;" class="video-js vjs-default-skin" autoplay=""
+                                controls="">
+                                <source src="../assets/images/Big_Buck_Bunny_1080_10s_2MB (1)-1646455004132.mp4"
+                                    controls="">
+                            </video>
+
+
+                            <!-- <ul class="pit-opt">
+
+                            <li title="Comments" class="comentz"><i class="fa fa-comment"></i><em>2.2k</em></li>
+
+                        </ul> -->
+                            <span class="uploadtime "><i class="fa fa-upload"></i>Published
+                                on
+                                Mon Mar 07 2022</span>
+                            <h4>Big_Buck_Bunny_1080_10s_2MB (1)-1646455004132-1646631891158.mp4</h4>
+                            <div class="d-flex">
+                                <p>2,60,40,258 views 04-Mar-2022</p>
+                                <span class="d-flex">
+                                    <i [ngClass]="{'fa-thumbs-o-up': !likeClicked, 'fa-thumbs-up': likeClicked}"
+                                        class="fa mt-1" (click)="likeDislike('like')" aria-hidden="true"
+                                        style="margin-left: 80px;"></i>
+                                    <p class="ms-1">{{likeCounter}}</p>
+                                    <i [ngClass]="{'fa-thumbs-o-down': !dislikeClicked, 'fa-thumbs-down': dislikeClicked}"
+                                        class="fa mt-1 ms-3" (click)="likeDislike('dislike')" aria-hidden="true"></i>
+                                    <p class="ms-1">{{dislikeCounter}}</p>
+                                    <i class="ri-share-forward-line mt-1 ms-3"></i>
+                                    <p class="ms-1">SHARE</p>
+                                    <i class="ri-menu-add-line mt-1 ms-3"></i>
+                                    <p class="ms-1">SAVE</p>
+                                </span>
+
+                            </div>
+                            <hr class="mt-2">
+                            <div class="d-flex">
+                                <img class="img-box" src="../../assets/images/u1.jpg" alt="user-img">
+                                <div>
+                                    <h6 class="ms-3 mb-0">sfwdstwdgdfyegy234</h6>
+                                    <p class="ms-3">2.9K subscribers</p>
+                                </div>
+                                <button type="button" class="btn btn-danger">SUBSCRIBE</button>
+                            </div>
+
+                            <div class="ms-5">
+                                <hr class=" mt-2 mb-2">
+                                <h6>Music in this video </h6>
+                                <h6>Learn more</h6>
+                                <h6 style="color: gray;">SHOW MORE</h6>
+                            </div>
+                            <hr class=" mt-2 mb-2">
+                            <div class="d-flex">
+                                <p class="mt-2">175 Commnet</p>
+                                <i class="ri-bar-chart-horizontal-line ms-5 mt-2"></i>
+                                <h4 class="mt-2 ms-2">SORT BY</h4>
+                            </div>
+
+                            <div class="ms-5 d-flex align-items-center">
+                                <img class="img-box" src="../../assets/images/u1.jpg" alt="user-img">
+                                <div class="text ms-3 w-100 border-bottom">
+                                    <h6>Add a comment…</h6>
+                                </div>
+                            </div>
+                            <div class="d-flex mt-5">
+                                <img class="img-box" src="../../assets/images/u1.jpg" alt="user-img">
+                                <div>
+                                    <h6 class="ms-3 mb-0">sfwdstwdgdfyegy234</h6>
+                                    <p class="ms-3 mb-0">This is good video...</p>
+
+
+                                    <span class="d-flex">
+                                        <i [ngClass]="{'fa-thumbs-o-up': !likeClicked, 'fa-thumbs-up': likeClicked}"
+                                            class="fa mt-1 ms-3" (click)="likeDislike('like')" aria-hidden="true"></i>
+                                        <p class="ms-1">{{likeCounter}}</p>
+                                        <i [ngClass]="{'fa-thumbs-o-down': !dislikeClicked, 'fa-thumbs-down': dislikeClicked}"
+                                            class="fa mt-1 ms-3" (click)="likeDislike('dislike')"
+                                            aria-hidden="true"></i>
+                                        <p class="ms-1">{{dislikeCounter}}</p>
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-5 pe-4">
+
+                <div class="central-meta">
+
+                    <div style="margin-bottom: 20px;">
+                        <div class="pull-left mt-sm" style="padding-right: 10px;">
+                            <i class="bi bi-chevron-left pointer arrow-css" (click)="scrollLeft()"></i>
+                        </div>
+
+                        <div #widgetsContent class="custom-slider-main">
+                            <div class="info-box-rounded" style="padding-left: 10px;">
+                                All
+                            </div>
+                            <div class="info-box info-box-rounded">
+                                Stebin Ben
+                            </div>
+                            <div class="info-box info-box-rounded">
+                                Indian Music
+                            </div>
+                            <div class="info-box info-box-rounded">
+                                Related
+                            </div>
+                            <div class="info-box info-box-rounded">
+                                Live
+                            </div>
+                            <div class="info-box info-box-rounded">
+                                Recently Uploaded
+                            </div>
+                            <div class="info-box info-box-rounded">
+                                Watched
+                            </div>
+                        </div>
+
+                        <div class="pull-right mt-sm" style="padding-left: 20px;">
+                            <i class="bi bi-chevron-right pointer arrow-css" (click)="scrollRight()"></i>
+                        </div>
+                    </div>
+                    <div class="side-right-panel related-tube-psts ps-container ps-theme-default ps-active-y"
+                        data-ps-id="ba6cfcaa-e254-30d1-8139-7306463a0a8b">
+                        <div class="rlted-video d-flex">
+                            <img src="../../assets/images/h1.jpg" alt="" width="130px" height="90px">
+
+                            <div class="tube-pst-meta ms-3">
+                                <div class="d-flex justify-content-between">
+                                    <h6><a href="#" class="title">Couple dating on the velintine
+                                            day</a></h6>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                            <div class="d-flex">
+                                                <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i>
+                                                <a class="dropdown-item" href="#">Save to Watch Later</a>
+                                            </div>
+                                            <div class="d-flex">
+                                                <i class="ri-menu-add-fill ms-2 mt-2"></i>
+                                                <a class="dropdown-item" href="#">Save to playlist</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="align-items-center">
+                                    <span class="d-block">2.2k views</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rlted-video d-flex">
+                            <img src="../assets/images/h2.jpg" alt="" width="130px" height="90px">
+
+                            <div class="tube-pst-meta ms-3">
+                                <div class="d-flex justify-content-between">
+                                    <h6><a href="#" class="title">Sea life is good than human
+                                            life
+                                            ;)</a></h6>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                            <div class="d-flex">
+                                                <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i>
+                                                <a class="dropdown-item" href="#">Save to Watch Later</a>
+                                            </div>
+                                            <div class="d-flex">
+                                                <i class="ri-menu-add-fill ms-2 mt-2"></i>
+                                                <a class="dropdown-item" href="#">Save to playlist</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="align-items-center">
+                                    <span class="d-block">2.2k views</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rlted-video d-flex">
+                            <img src="../assets/images/h3.jpg" alt="" width="130px" height="90px">
+
+                            <div class="tube-pst-meta ms-3">
+                                <div class="d-flex justify-content-between">
+                                    <h6><a href="#" class="title">Birds always love with poeple
+                                            but
+                                            people not</a></h6>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                            <div class="d-flex">
+                                                <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i>
+                                                <a class="dropdown-item" href="#">Save to Watch Later</a>
+                                            </div>
+                                            <div class="d-flex">
+                                                <i class="ri-menu-add-fill ms-2 mt-2"></i>
+                                                <a class="dropdown-item" href="#">Save to playlist</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="align-items-center">
+                                    <span class="d-block">2.2k views</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rlted-video d-flex">
+                            <img src="../assets/images/h4.jpg" alt="" width="130px" height="90px">
+
+                            <div class="tube-pst-meta ms-3">
+                                <div class="d-flex justify-content-between">
+                                    <h6><a href="#" class="title">My first journy to Miami beach
+                                            2020</a></h6>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                            <div class="d-flex">
+                                                <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i>
+                                                <a class="dropdown-item" href="#">Save to Watch Later</a>
+                                            </div>
+                                            <div class="d-flex">
+                                                <i class="ri-menu-add-fill ms-2 mt-2"></i>
+                                                <a class="dropdown-item" href="#">Save to playlist</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="align-items-center">
+                                    <span class="d-block">2.2k views</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="rlted-video d-flex">
+                            <img src="../assets/images/h1.jpg" alt="" width="130px" height="90px">
+
+                            <div class="tube-pst-meta ms-3">
+                                <div class="d-flex justify-content-between">
+                                    <h6><a href="#" class="title">A Complete photoshoot in paris
+                                            for
+                                            teens only</a></h6>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <div class="d-flex">
+                                                <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i>
+                                                <a class="dropdown-item" href="#">Save to Watch Later</a>
+                                            </div>
+                                            <div class="d-flex">
+                                                <i class="ri-menu-add-fill ms-2 mt-2"></i>
+                                                <a class="dropdown-item" href="#">Save to playlist</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="align-items-center">
+                                    <span class="d-block">2.2k views</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="rlted-video d-flex">
+                            <img src="../assets/images/h4.jpg" alt="" width="130px" height="90px">
+
+                            <div class="tube-pst-meta ms-3">
+                                <div class="d-flex justify-content-between">
+                                    <h6><a href="#" class="title">A Complete photoshoot in paris
+                                            for
+                                            teens only</a></h6>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <div class="d-flex">
+                                                <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i>
+                                                <a class="dropdown-item" href="#">Save to Watch Later</a>
+                                            </div>
+                                            <div class="d-flex">
+                                                <i class="ri-menu-add-fill ms-2 mt-2"></i>
+                                                <a class="dropdown-item" href="#">Save to playlist</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="align-items-center">
+                                    <span class="d-block">2.2k views</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="rlted-video d-flex">
+                            <img src="../assets/images/h3.jpg" alt="" width="130px" height="90px">
+
+                            <div class="tube-pst-meta ms-3">
+                                <div class="d-flex justify-content-between">
+                                    <h6><a href="#" class="title">A Complete photoshoot in paris
+                                            for
+                                            teens only</a></h6>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <div class="d-flex">
+                                                <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i>
+                                                <a class="dropdown-item" href="#">Save to Watch Later</a>
+                                            </div>
+                                            <div class="d-flex">
+                                                <i class="ri-menu-add-fill ms-2 mt-2"></i>
+                                                <a class="dropdown-item" href="#">Save to playlist</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="align-items-center">
+                                    <span class="d-block">2.2k views</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="rlted-video d-flex">
+                            <img src="../assets/images/h2.jpg" alt="" width="130px" height="90px">
+
+                            <div class="tube-pst-meta ms-3">
+                                <div class="d-flex justify-content-between">
+                                    <h6><a href="#" class="title">A Complete photoshoot in paris
+                                            for
+                                            teens only</a></h6>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <div class="d-flex">
+                                                <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i>
+                                                <a class="dropdown-item" href="#">Save to Watch Later</a>
+                                            </div>
+                                            <div class="d-flex">
+                                                <i class="ri-menu-add-fill ms-2 mt-2"></i>
+                                                <a class="dropdown-item" href="#">Save to playlist</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="align-items-center">
+                                    <span class="d-block">2.2k views</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+            </div> -->
+
+
+                <div class="col-lg-5">
+                    <div class="central-meta">
+                        <span class="create-post mb-0">Related Videos</span>
+                        <div class="video-list">
+                            <div class="rlted-video d-flex justify-content-between mt-2 mb-0 border-0">
+                                <img src="../../assets/images/h1.jpg" alt="" width="130px" height="90px">
+
+                                <div class="tube-pst-meta ms-3 me-3">
+                                    <a href="" class="text-decoration-none text-dark">
+                                        <h5>Couple dating on the velintine
+                                            day</h5>
+                                        <span>2.2k views</span>
+                                    </a>
+                                </div>
+                                <div class="icon-box d-flex justify-content-between align-items-center me-3">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v ms-5"></i>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <div class="d-flex">
+                                                <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i>
+                                                <a class="dropdown-item" href="#">Save to Watch Later</a>
+                                            </div>
+                                            <div class="d-flex">
+                                                <i class="ri-menu-add-fill ms-2 mt-2"></i>
+                                                <a class="dropdown-item" href="#">Save to playlist</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="rlted-video d-flex justify-content-between mt-2 mb-0 border-0">
+                                <img src="../../assets/images/h1.jpg" alt="" width="130px" height="90px">
+
+                                <div class="tube-pst-meta ms-3 me-3">
+                                    <a href="" class="text-decoration-none text-dark">
+                                        <h5>Sea life is good than human life</h5>
+                                        <span>3.2M views</span>
+                                    </a>
+                                </div>
+                                <div class="icon-box d-flex justify-content-between align-items-center me-3">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v ms-5"></i>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                            <div class="d-flex">
+                                                <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i>
+                                                <a class="dropdown-item" href="#">Save to Watch Later</a>
+                                            </div>
+                                            <div class="d-flex">
+                                                <i class="ri-menu-add-fill ms-2 mt-2"></i>
+                                                <a class="dropdown-item" href="#">Save to playlist</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="rlted-video d-flex justify-content-between mt-2 mb-0 border-0">
+                                <img src="../../assets/images/h2.jpg" alt="" width="130px" height="90px">
+                                <div class="tube-pst-meta ms-3 me-3">
+                                    <a href="" class="text-decoration-none text-dark">
+                                        <h5> Birds always love with poeple but
+                                            people not</h5>
+                                        <span>3.2M views</span>
+                                    </a>
+                                </div>
+                                <div class="icon-box d-flex justify-content-between align-items-center me-3">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v ms-5"></i>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                            <div class="d-flex">
+                                                <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i>
+                                                <a class="dropdown-item" href="#">Save to Watch Later</a>
+                                            </div>
+                                            <div class="d-flex">
+                                                <i class="ri-menu-add-fill ms-2 mt-2"></i>
+                                                <a class="dropdown-item" href="#">Save to playlist</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="rlted-video d-flex justify-content-between mt-2 mb-0 border-0">
+                                <img src="../../assets/images/h3.jpg" alt="" width="130px" height="90px">
+                                <div class="tube-pst-meta ms-3 me-3">
+                                    <a href="" class="text-decoration-none text-dark">
+                                        <h5>My first journy to Miami beach
+                                            2020</h5>
+                                        <span>3.2M views</span>
+                                    </a>
+                                </div>
+                                <div class="icon-box d-flex justify-content-between align-items-center me-3">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v ms-5"></i>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                            <div class="d-flex">
+                                                <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i>
+                                                <a class="dropdown-item" href="#">Save to Watch Later</a>
+                                            </div>
+                                            <div class="d-flex">
+                                                <i class="ri-menu-add-fill ms-2 mt-2"></i>
+                                                <a class="dropdown-item" href="#">Save to playlist</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="rlted-video d-flex justify-content-between mt-2 mb-0 border-0">
+                                <img src="../../assets/images/h4.jpg" alt="" width="130px" height="90px">
+                                <div class="tube-pst-meta ms-3 me-3">
+                                    <a href="" class="text-decoration-none text-dark">
+                                        <h5>A Complete photoshoot in paris for
+                                            teens only</h5>
+                                        <span>3.2M views</span>
+                                    </a>
+                                </div>
+                                <div class="icon-box d-flex justify-content-between align-items-center me-3">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-ellipsis-v ms-5"></i>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                            <div class="d-flex">
+                                                <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i>
+                                                <a class="dropdown-item" href="#">Save to Watch Later</a>
+                                            </div>
+                                            <div class="d-flex">
+                                                <i class="ri-menu-add-fill ms-2 mt-2"></i>
+                                                <a class="dropdown-item" href="#">Save to playlist</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;">
+                                <div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                            </div>
+                            <div class="ps-scrollbar-y-rail" style="top: 0px; right: 0px;">
+                                <div class="ps-scrollbar-y" tabindex="0" style="top: 0px; "></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="justify-content-between" style="margin-bottom: 20px;">
+                        <div class="pull-left mt-sm  mt-1" style="font-size: 22px; padding-right: 10px;">
+                            <i class="bi bi-chevron-left pointer arrow-css" (click)="scrollLeft()"></i>
+                        </div>
+
+                        <div #widgetsContent class="custom-slider-main">
+                            <div class="info-box-rounded">
+                                All
+                            </div>
+                            <div class="info-box info-box-rounded">
+                                Stebin Ben
+                            </div>
+                            <div class="info-box info-box-rounded">
+                                Indian Music
+                            </div>
+                            <div class="info-box info-box-rounded">
+                                Related
+                            </div>
+                            <div class="info-box info-box-rounded">
+                                Live
+                            </div>
+                            <div class="info-box info-box-rounded">
+                                Recently Uploaded
+                            </div>
+                            <div class="info-box info-box-rounded">
+                                Watched
+                            </div>
+                        </div>
+
+                        <div class="pull-right mt-sm  mt-1" style="font-size: 22px; padding-left: 10px;">
+                            <i class="bi bi-chevron-right pointer arrow-css" (click)="scrollRight()"></i>
+                        </div>
+                    </div>
+
+                    <div class="rlted-video d-flex justify-content-between mt-2 mb-0 border-0">
+                        <img src="../../assets/images/h1.jpg" alt="" width="130px" height="90px">
+                        <div class="tube-pst-met ms-3 me-3">
+                            <a href="" class="text-decoration-none text-dark">
+                                <h5>Sea life is good than human life</h5>
+                                <span>3.2M views</span>
+                            </a>
+                        </div>
+                        <div class="icon-box d-flex justify-content-between align-items-center me-3">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-ellipsis-v ms-5"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                    <div class="d-flex">
+                                        <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i>
+                                        <a class="dropdown-item" href="#">Save to Watch Later</a>
+                                    </div>
+                                    <div class="d-flex">
+                                        <i class="ri-menu-add-fill ms-2 mt-2"></i>
+                                        <a class="dropdown-item" href="#">Save to playlist</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rlted-video d-flex justify-content-between mt-2 mb-0 border-0">
+                        <img src="../../assets/images/h2.jpg" alt="" width="130px" height="90px">
+                        <div class="tube-pst-met ms-3 me-3">
+                            <a href="" class="text-decoration-none text-dark">
+                                <h5>My first journy to Miami beach
+                                    2020</h5>
+                                <span>3.2M views</span>
+                            </a>
+                        </div>
+                        <div class="icon-box d-flex justify-content-between align-items-center me-3">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-ellipsis-v ms-5"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                    <div class="d-flex">
+                                        <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i>
+                                        <a class="dropdown-item" href="#">Save to Watch Later</a>
+                                    </div>
+                                    <div class="d-flex">
+                                        <i class="ri-menu-add-fill ms-2 mt-2"></i>
+                                        <a class="dropdown-item" href="#">Save to playlist</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rlted-video d-flex justify-content-between mt-2 mb-0 border-0">
+                        <img src="../../assets/images/h3.jpg" alt="" width="130px" height="90px">
+                        <div class="tube-pst-met ms-3 me-3">
+                            <a href="" class="text-decoration-none text-dark">
+                                <h5>Birds always love with poeple but
+                                    people not</h5>
+                                <span>3.2M views</span>
+                            </a>
+                        </div>
+                        <div class="icon-box d-flex justify-content-between align-items-center me-3">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-ellipsis-v ms-5"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                    <div class="d-flex">
+                                        <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i>
+                                        <a class="dropdown-item" href="#">Save to Watch Later</a>
+                                    </div>
+                                    <div class="d-flex">
+                                        <i class="ri-menu-add-fill ms-2 mt-2"></i>
+                                        <a class="dropdown-item" href="#">Save to playlist</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rlted-video d-flex justify-content-between mt-2 mb-0 border-0">
+                        <img src="../../assets/images/h4.jpg" alt="" width="130px" height="90px">
+                        <div class="tube-pst-met ms-3 me-3">
+                            <a href="" class="text-decoration-none text-dark">
+                                <h5>A Complete photoshoot in paris for
+                                    teens only</h5>
+                                <span>3.2M views</span>
+                            </a>
+                        </div>
+                        <div class="icon-box d-flex justify-content-between align-items-center me-3">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-ellipsis-v ms-5"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                    <div class="d-flex">
+                                        <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i>
+                                        <a class="dropdown-item" href="#">Save to Watch Later</a>
+                                    </div>
+                                    <div class="d-flex">
+                                        <i class="ri-menu-add-fill ms-2 mt-2"></i>
+                                        <a class="dropdown-item" href="#">Save to playlist</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="rlted-video d-flex justify-content-between mt-2 mb-0 border-0">
+                        <img src="../../assets/images/h1.jpg" alt="" width="130px" height="90px">
+                        <div class="tube-pst-met ms-3 me-3">
+                            <a href="" class="text-decoration-none text-dark">
+                                <h5>My first journy to Miami beach
+                                    2020</h5>
+                                <span>3.2M views</span>
+                            </a>
+                        </div>
+                        <div class="icon-box d-flex justify-content-between align-items-center me-3">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-ellipsis-v ms-5"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                                    <div class="d-flex">
+                                        <i class="fa fa-clock-o  ms-2 mt-2" aria-hidden="true"></i>
+                                        <a class="dropdown-item" href="#">Save to Watch Later</a>
+                                    </div>
+                                    <div class="d-flex">
+                                        <i class="ri-menu-add-fill ms-2 mt-2"></i>
+                                        <a class="dropdown-item" href="#">Save to playlist</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

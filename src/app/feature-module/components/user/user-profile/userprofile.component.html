@@ -1,0 +1,118 @@
+<div class="main" style="background-color: #f9f9f9 !important;">
+    <h1>Channel content</h1>
+    <div class="row">
+        <div class="col-sm-12 tabbing-box pt-0">
+
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#HOME">Filter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#VIDEOS">Live</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane container fade active show" id="HOME">
+                    <div class="d-flex mt-3">
+                        <button class="align-icon" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-align-center"></i>
+                        </button>
+                        <span class="ms-4">Filter</span>
+                        <div class="d-flex dropdown">
+                            <div class="dropdown-menu dropdown-menu-liked" aria-labelledby="dropdownMenuButton">
+                                <div class="d-flex">
+                                    <a class="dropdown-item" href="#">Age restriction</a>
+                                </div>
+                                <div class="d-flex">
+                                    <a class="dropdown-item" href="#">Copyright claims</a>
+                                </div>
+                                <div class="d-flex">
+                                    <a class="dropdown-item" href="#">Description</a>
+                                </div>
+                                <div class="d-flex">
+                                    <a class="dropdown-item" href="#">Title</a>
+                                </div>
+                                <div class="d-flex">
+                                    <a class="dropdown-item" href="#">Views</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mt-2 mb-2">
+                    <div class="d-flex justify-content-between">
+                        <div class="form-check ps-4">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label ms-2" for="flexCheckDefault">
+                                Video
+                            </label>
+                        </div>
+                        <div class=" d-flex justify-content-between right-texts">
+                            <span>Visibility</span>
+                            <span class="mx-5">Restrictions</span>
+                            <span class="mx-5 d-flex">Date <i class="fa fa-arrow-down mt-1 ms-1"
+                                    aria-hidden="true"></i></span>
+                            <span>Views</span>
+                        </div>
+                    </div>
+                    <hr class="mt-2 mb-2">
+                    <div class="text-center">
+                        <img src="../assets/images/users/uploadcontent.svg" alt="">
+                        <p>No content available</p>
+                        <button type="button" (click)="openVerticallyCentered(content)" class="btn btn-primary">UPLOAD
+                            VIDEO</button>
+                    </div>
+                </div>
+                <div class="tab-pane container fade" id="VIDEOS">
+                    <div class="d-flex mt-3">
+                        <i class="fa fa-align-center"></i>
+                        <span class="ms-4">Filter</span>
+                    </div>
+                    <hr class="mt-2 mb-2">
+                    <div class="d-flex justify-content-between">
+                        <div class="form-check ps-4">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label ms-2" for="flexCheckDefault">
+                                Live stream
+                            </label>
+                        </div>
+                        <div class=" d-flex justify-content-between right-texts">
+                            <span>Visibility</span>
+                            <span class="mx-5">Restrictions</span>
+                            <span class="mx-5 d-flex">Date <i class="fa fa-arrow-down mt-1 ms-1"
+                                    aria-hidden="true"></i></span>
+                            <span>Views</span>
+                        </div>
+                    </div>
+                    <hr class="mt-2 mb-2">
+                    <div class="text-center">
+                        <img src="../assets/images/users/content.svg" alt="">
+                        <p>Your live streams will show up here</p>
+                        <button type="button" class="btn btn-primary">GET STARTED</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h2 class="modal-title"><b>Upload Page</b></h2>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body text-center">
+        <div class="text-center upload-icon">
+            <i class="ri-upload-2-fill"></i>
+        </div>
+        <h4 class="mb-0 mt-3">Drag and drop video files to upload</h4>
+        <p>Your videos will be private until you publish them.</p>
+        <button type="button" class="btn btn-primary mt-3 mb-4">SELECT FILES</button>
+        <p>By submitting your videos to TokenTube, you acknowledge that you agree to TokenTube's Terms of Service and
+            Community
+            Guidelines.</p>
+    </div>
+</ng-template>

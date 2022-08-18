@@ -1,0 +1,106 @@
+<div class="main" style="background-color: #f9f9f9 !important;">
+    <div class="d-flex justify-content-between">
+        <h1>Channel playlists</h1>
+        <span (click)="openVerticallyCentered(content)" style="color:blue; cursor: pointer;">NEW PLAYLIST</span>
+    </div>
+    <hr class="mt-2 mb-2">
+    <div class="tab-pane container fade active show" id="HOME">
+        <div class="d-flex mt-3">
+            <button class="align-icon" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <i class="fa fa-align-center"></i>
+            </button>
+            <span class="ms-4">Filter</span>
+            <div class="d-flex dropdown">
+                <div class="dropdown-menu dropdown-menu-liked" aria-labelledby="dropdownMenuButton">
+                    <div class="d-flex">
+                        <a class="dropdown-item" href="#">Age restriction</a>
+                    </div>
+                    <div class="d-flex">
+                        <a class="dropdown-item" href="#">Copyright claims</a>
+                    </div>
+                    <div class="d-flex">
+                        <a class="dropdown-item" href="#">Description</a>
+                    </div>
+                    <div class="d-flex">
+                        <a class="dropdown-item" href="#">Title</a>
+                    </div>
+                    <div class="d-flex">
+                        <a class="dropdown-item" href="#">Views</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="mt-2 mb-2">
+        <div class="d-flex justify-content-between">
+            <span>playlists</span>
+            <div class=" d-flex justify-content-between right-texts">
+                <span class="mx-5">Visibility</span>
+                <span class="mx-5">Last Updates</span>
+                <span>Video Count</span>
+            </div>
+        </div>
+        <hr class="mt-2 mb-2">
+        <div class="text-center mt-5">
+            <h4>Your playlists will appear here.</h4>
+        </div>
+    </div>
+</div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title">New Playlist</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="playlistForm" (ngSubmit)="playlistForms()" class="we-form" method="post"
+            enctype="multipart/form-data" novalidate="">
+            <div class="form-group row align-items-center mb-3">
+                <label class="col-lg-5 col-xl-3 control-label text-lg-end pt-2 mt-1 mb-0">Description</label>
+                <div class="col-lg-7 col-xl-6 w-74">
+                    <textarea class="form-control form-control-modern" formControlName="playlist_title"
+                        [ngClass]="{'danger-class': (submitted && f['playlist_title'].errors) || (f['playlist_title'].errors && f['playlist_title'].touched)}"
+                        rows="6"></textarea>
+                    <div *ngIf="(submitted && f['playlist_title'].errors) || (f['playlist_title'].errors && f['playlist_title'].touched)"
+                        class="invalid-feedback">
+                        <div *ngIf="f['playlist_title'].errors['required']"> Playlist title is
+                            required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row align-items-center mb-3">
+                <label class="col-lg-5 col-xl-3 control-label text-lg-end mb-0">Banner Status</label>
+                <div class="col-lg-7 col-xl-6 w-74">
+                    <select class="form-control form-control-modern" formControlName="playlist_visibility"
+                        [ngClass]="{'danger-class': (submitted && f['playlist_visibility'].errors) || (f['playlist_visibility'].errors && f['playlist_visibility'].touched)}">
+                        <option value="">Select Visibility</option>
+                        <option value="true">Public</option>
+                        <option value="false">Private</option>
+                        <option value="false">Unlisted</option>
+                    </select>
+                    <div *ngIf="(submitted && f['playlist_visibility'].errors) || (f['playlist_visibility'].errors && f['playlist_visibility'].touched)"
+                        class="invalid-feedback">
+                        <div *ngIf="f['playlist_visibility'].errors['required']"> Playlist visibility is
+                            required</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row action-buttons mt-5">
+                <div class="col-12 col-md-auto">
+                    <button (click)="modal.close('Close click')" class="btn btn-warning d-flex align-items-center"
+                        data-ripple="">
+                        <i class="fa fa-angle-left me-2" aria-hidden="true"></i>
+                        Back to List
+                    </button>
+                </div>
+                <div class="col-12 col-md-auto ms-md-auto mt-3 mt-md-0 ms-auto">
+                    <button type="submit" class="btn btn-primary d-flex align-items-center" data-ripple="">
+                        <i class="fa fa-floppy-o me-2" aria-hidden="true"></i>
+                        Save Playlist
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</ng-template>

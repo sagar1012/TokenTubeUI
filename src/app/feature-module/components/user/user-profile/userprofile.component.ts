@@ -1,0 +1,36 @@
+import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Validators, FormGroup, FormBuilder, FormControl } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { NotifierService } from 'angular-notifier';
+import { Router } from '@angular/router';
+
+declare let $: any;
+import * as myGlobals from "../../../../globals";
+
+
+@Component({
+  selector: 'app-userprofile',
+  templateUrl: './userprofile.component.html',
+  styleUrls: ['./userprofile.component.scss']
+})
+export class UserprofileComponent implements OnInit {
+
+  public profileForm!: FormGroup;
+  submitted: boolean = false;
+
+  private readonly notifier: NotifierService;
+
+  constructor(private modalService: NgbModal, private formBuilder: FormBuilder, private http: HttpClient, notifierService: NotifierService, private router: Router) {
+    this.notifier = notifierService;
+
+  }
+
+  ngOnInit(): void {
+  }
+
+  openVerticallyCentered(content: any) {
+    this.modalService.open(content, { centered: true });
+  }
+
+}

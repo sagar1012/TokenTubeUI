@@ -1,0 +1,77 @@
+<div class="main">
+    <!-- Dashboard section -->
+
+    <div class="dashsec d-flex justify-content-between">
+        <h2 class="dash-ttl">Channel dashboard</h2>
+        <a href="/upload-video">
+            <div class="up-cvr">
+                <i class="fa fa-upload ic" aria-hidden="true"></i>
+            </div>
+        </a>
+    </div>
+    <div class="row mt-3">
+        <!-- <div class="col-lg-12 col-md-6 col-sm-4 row"> -->
+        <div class="col-md-4 pl-0">
+            <div class="up-container">
+                <div class="up-dshd-con text-center pb-5">
+                    <div class="mt-5">
+                        <img class="w-100" src="../assets/images/no_content_illustration_upload_video_v3.svg" alt="">
+                    </div>
+                    <p style="font-size: 12px; color: rgb(134, 133, 133);">
+                        Want to see metrics on your recent video?
+                        Upload and publish a video to get started.
+                    </p>
+                    <a class="form-control btn-primary mt-2 mb-5" (click)="openVerticallyCentered(content)"
+                        style="font-size: 14px;">
+                        UPLOAD VIDEOS
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="up-container p-3" style="height: fit-content;">
+                <h2 class="mb-2">Channel analytics</h2>
+                <h4 class="mb-0">Current subscribers</h4>
+                <h1>0</h1>
+
+                <hr class="mt-4 mb-2" style="border-top: 1px solid #435d8e;">
+
+                <h2 class="mb-0">Summary</h2>
+                <h4>Last 28 days</h4>
+                <div class="d-flex justify-content-between">
+                    <p style="font-size:15px;">Views</p>
+                    <span style="font-size:15px;">0 -</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <p style="font-size:15px;">Watch time (hours)</p>
+                    <span style="font-size:15px;">0.0 -</span>
+                </div>
+
+                <hr class="mt-3 mb-2" style="border-top: 1px solid #435d8e;">
+
+                <h2 class="mb-0">Top videos</h2>
+                <h5>Last 48 hours · Views</h5>
+            </div>
+        </div>
+        <!-- </div> -->
+    </div>
+</div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h2 class="modal-title"><b>Upload Page</b></h2>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body text-center">
+        <div class="text-center upload-icon">
+            <i class="ri-upload-2-fill"></i>
+        </div>
+        <h4 class="mb-0 mt-3">Drag and drop video files to upload</h4>
+        <p>Your videos will be private until you publish them.</p>
+        <button type="button" class="btn btn-primary mt-3 mb-4">SELECT FILES</button>
+        <p>By submitting your videos to TokenTube, you acknowledge that you agree to TokenTube's Terms of Service and
+            Community
+            Guidelines.</p>
+
+    </div>
+</ng-template>

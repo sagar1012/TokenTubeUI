@@ -1,0 +1,142 @@
+<section class="m-5 p-5 mt-3 pt-3 me-0 pe-0" style="overflow: hidden;">
+    <div class="row">
+        <div class="col me-3">
+            <h2 class="font-weight-bold text-6">Banner</h2>
+            <div class="card card-modern">
+                <div class="card-body">
+                    <div class="mt-2">
+                        <div class="">
+                            <div class="row align-items-center mb-3">
+                                <div class="col-12 col-lg-auto mb-3 mb-lg-0">
+                                    <button class="btn btn-outline-primary mb-2 me-2" (click)="openVerticallyCentered(content)">Add Banner</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <table id="dtBanner" class="table table-striped mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="th-sm" width="8%">#</th>
+                                    <th class="th-sm" width="12%">Title</th>
+                                    <th class="th-sm" width="30%">Image</th>
+                                    <th class="th-sm" width="23%">Position</th>
+                                    <th class="th-sm" width="12%">Status</th>
+                                    <th class="th-sm" width="12%">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let data of bannerData; index as i;">
+                                    <td><strong>{{ data.id }}</strong></td>
+                                    <td><strong>{{ data.banner_title }}</strong></td>
+                                    <td><img height="80" width="200" src="../../../../app/admin/assets/images/{{data.banner_imagename}}" alt=""></td>
+                                    <td>{{ data.banner_position }}</td>
+                                    <td>{{ data.banner_status }}</td>
+                                    <td>
+                                        <input type="hidden" name="hdnbannerId" value="{{data.id}}"/>
+                                        <!-- <button type="button" class="btn btn-sm"> -->
+                                            <i (click)="editBanner(content, data.id)" class="fa fa-pencil pointer" aria-hidden="true"></i>
+                                            <i (click)="deleteBanner(data.id)" class="fa fa-trash text-danger ms-3 pointer" aria-hidden="true"></i>
+                                        <!-- </button> -->
+                                    </td>
+                                </tr>                              
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Add Banner</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="bannerForm" (ngSubmit)="bannerForms(bannerId)" class="we-form" method="post" enctype="multipart/form-data" novalidate="">
+            <div class="form-group row align-items-center mb-3">
+                <label class="col-lg-5 col-xl-3 control-label text-lg-end mb-0">Banner Title</label>
+                <div class="col-lg-7 col-xl-6 w-74">
+                    <input value="{{f['banner_title'].value}}" formControlName="banner_title" type="text" class="form-control form-control-modern" placeholder="Banner Title"
+                    [ngClass]="{'danger-class': (submitted && f['banner_title'].errors) || (f['banner_title'].errors && f['banner_title'].touched)}">
+                    <div *ngIf="(submitted && f['banner_title'].errors) || (f['banner_title'].errors && f['banner_title'].touched)"
+                                                class="invalid-feedback">
+                                                <div *ngIf="f['banner_title'].errors['required']"> Banner title is
+                                                    required</div>
+                                            </div>
+                </div>
+            </div>
+            <div class="form-group row align-items-center mb-3">
+                <label class="col-lg-5 col-xl-3 control-label text-lg-end mb-0">Banner Image</label>
+                <div class="col-lg-7 col-xl-6 w-74">
+                    <input (change)="onFileSelected($event)" #fileUpload formControlName="banner_image" type="file" class="form-control form-control-modern" placeholder="Banner Image"
+                    [ngClass]="{'danger-class': (submitted && f['banner_image'].errors) || (f['banner_image'].errors && f['banner_image'].touched)}">
+                    <div *ngIf="(submitted && f['banner_image'].errors) || (f['banner_image'].errors && f['banner_image'].touched)"
+                                                class="invalid-feedback">
+                                                <div *ngIf="f['banner_image'].errors['required']"> Banner image is
+                                                    required</div>
+                                            </div>
+                </div>
+            </div>
+            <div class="form-group row align-items-center mb-3">
+                <label class="col-lg-5 col-xl-3 control-label text-lg-end mb-0">Banner Position</label>
+                <div class="col-lg-7 col-xl-6 w-74">
+                    <select value="{{f['banner_position'].value}}" class="form-control form-control-modern" formControlName="banner_position" [ngClass]="{'danger-class': (submitted && f['banner_position'].errors) || (f['banner_position'].errors && f['banner_position'].touched) || (f['banner_position'].value == 0 && f['banner_position'].touched)|| (f['banner_position'].value == 0 && f['banner_position'].touched)}">
+                        <option value="0">Select Position</option>
+                        <option value="Right Top Corner">Right Top Corner</option>
+                        <option value="Left Top Corner">Left Top Corner</option>
+                        <option value="Right Bottom Corner">Right Bottom Corner</option>
+                        <option value="Left Bottom Corner">Left Bottom Corner</option>
+                    </select>
+                    <div *ngIf="(submitted && f['banner_position'].value == 0) || (f['banner_position'].value == 0 && f['banner_position'].touched)"
+                                                class="invalid-feedback">
+                                                <div *ngIf="f['banner_position'].value == 0"> Banner position is
+                                                    required</div>
+                                            </div>
+                </div>
+            </div>
+            <div class="form-group row align-items-center mb-3">
+                <label class="col-lg-5 col-xl-3 control-label text-lg-end mb-0">Banner Status</label>
+                <div class="col-lg-7 col-xl-6 w-74">
+                    <select value="{{f['banner_status'].value}}" class="form-control form-control-modern" formControlName="banner_status" [ngClass]="{'danger-class': (submitted && f['banner_status'].errors) || (f['banner_status'].errors && f['banner_status'].touched) || (f['banner_status'].value == 0 && f['banner_status'].touched)}">
+                        <option value="0">Select Status</option>
+                        <option value="true">Active</option>
+                        <option value="false">In-Active</option>                                                        
+                    </select>
+                    <div *ngIf="(submitted && f['banner_status'].value == 0) || (f['banner_status'].value == 0 && f['banner_status'].touched)"
+                                                class="invalid-feedback">
+                                                <div *ngIf="f['banner_status'].value == 0"> Banner status is
+                                                    required</div>
+                                            </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-lg-5 col-xl-3 control-label text-lg-end pt-2 mt-1 mb-0">Description</label>
+                <div class="col-lg-7 col-xl-6 w-74">
+                    <textarea value="{{f['banner_description'].value}}" class="form-control form-control-modern" formControlName="banner_description" [ngClass]="{'danger-class': (submitted && f['banner_description'].errors) || (f['banner_description'].errors && f['banner_description'].touched)}" rows="6"></textarea>
+                    <div *ngIf="(submitted && f['banner_description'].errors) || (f['banner_description'].errors && f['banner_description'].touched)"
+                                                class="invalid-feedback">
+                                                <div *ngIf="f['banner_description'].errors['required']"> Banner description is
+                                                    required</div>
+                                            </div>
+                </div>
+            </div>
+            <div class="row action-buttons mt-5">
+                <div class="col-12 col-md-auto">
+                    <button (click)="modal.close('Close click')" class="btn btn-warning d-flex align-items-center" data-ripple="">
+                        <i class="fa fa-angle-left me-2" aria-hidden="true"></i>
+                        Back to List
+                    </button>
+                   </div>
+                <div class="col-12 col-md-auto ms-md-auto mt-3 mt-md-0 ms-auto">
+                    <button type="submit" class="btn btn-primary d-flex align-items-center" data-ripple="">
+                        <i class="fa fa-floppy-o me-2" aria-hidden="true"></i>
+                        Save Banner
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</ng-template>
+  

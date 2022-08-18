@@ -1,0 +1,266 @@
+.icon-text img {
+    width: 30px;
+}
+
+.icon-text {
+    background: #fff;
+    border-radius: 10px;
+}
+
+.icon-text:hover {
+    background-color: #e0e0e0;
+}
+
+.img-size {
+    border-radius: 50px;
+    width: 32px;
+    height: 32px;
+}
+
+.rlted-video {
+    // border-bottom: 1px solid #dcdcdc;
+    display: inline-block;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.rlted-video {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.rlted-video:hover .fa-trash-o:before,
+.rlted-video:hover .fa-ellipsis-v:before {
+    visibility: visible !important;
+    cursor: pointer;
+}
+
+.rlted-video:hover {
+    background-color: #fbfafa;
+}
+
+.tube-pst-meta .title {
+    font-size: 16px;
+}
+
+.dropdown-toggle {
+    visibility: hidden;
+}
+
+.dropdown-menu {
+    position: relative;
+    min-width: auto;
+}
+
+.dropdown-menu {
+    left: inherit !important;
+    right: 0px;
+    transform: translate3d(-25px, 30px, 0px) !important;
+}
+
+.video-div {
+    width: 250px;
+    height: 140px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.video-css {
+    width: 250px;
+    height: 140px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.video-image {
+    position: relative;
+}
+
+.video-timer {
+    position: absolute;
+    color: #fff;
+    fill: #fff;
+    background-color: #212121;
+    bottom: 0;
+    right: 0;
+}
+
+.video-thumbnail {
+    position: relative;
+    display: none;
+}
+
+// .video-image:hover {
+//     display: none;
+// }
+
+// .video-image:hover + .video-thumbnail {
+//     display: block;
+// }
+
+.rlted-video:hover .video-image {
+    display: none;
+}
+
+.rlted-video:hover .video-thumbnail {
+    display: block;
+}
+
+.addtoqueue {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    z-index: 99;
+    margin-top: 40px;
+    margin-left: -30px;
+    fill: white;
+    background-color: #212121;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.watchlater {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    z-index: 9;
+    margin-top: 10px;
+    margin-left: -30px;
+    fill: white;
+    background-color: #212121;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.queuetooltip,
+.watchtooltip {
+    visibility: hidden;
+    width: 100px;
+    background-color: #212121;
+    color: #fff;
+    text-align: center;
+    border-radius: 0px;
+    padding: 2px 0;
+    position: absolute;
+    z-index: 999;
+    top: 0px;
+    right: 101%;
+}
+
+.queuetooltip::after,
+.watchtooltip::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+}
+
+.addtoqueue:hover .queuetooltip {
+    visibility: visible;
+}
+
+.watchlater:hover .watchtooltip {
+    visibility: visible;
+}
+
+.verifiedtooltip {
+    visibility: hidden;
+    width: 60px;
+    background-color: #212121;
+    color: #fff;
+    text-align: center;
+    border-radius: 0px;
+    padding: 4px 0;
+    position: absolute;
+    z-index: 9999;
+    left: 38%;
+    margin-top: -30px;
+}
+
+.verifiedtooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+}
+
+.verified:hover .verifiedtooltip {
+    visibility: visible;
+}
+
+.fade-in {
+    animation: fadeIn ease 1s;
+    -webkit-animation: fadeIn ease 1s;
+    -moz-animation: fadeIn ease 1s;
+    -o-animation: fadeIn ease 1s;
+    -ms-animation: fadeIn ease 1s;
+}
+
+.fade-out {
+    animation: fadeOut ease 1s;
+    -webkit-animation: fadeOut ease 1s;
+    -moz-animation: fadeOut ease 1s;
+    -o-animation: fadeOut ease 1s;
+    -ms-animation: fadeOut ease 1s;
+}
+
+@media only screen and (max-width: 600px) {
+    .explore-things {
+        display: block !important;
+    }
+
+    .explore-things .col-flex {
+        display: inline-block;
+        width: 50% !important;
+    }
+
+    .explore-things .icon-text {
+        margin-left: 0 !important;
+        margin: 15px;
+    }
+
+    .res-top {
+        margin-top: 50px;
+    }
+
+    .rlted-video.d-flex {
+        display: block !important;
+    }
+
+    .video-css {
+        width: 100%;
+        height: 100%;
+    }
+
+    .tube-pst-meta.w-60 {
+        width: 100% !important;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 0 !important;
+    }
+
+    .tube-pst-meta h2 {
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+
+    .explore-things .col-flex {
+        display: block;
+        width: 100% !important;
+    }
+
+    .explore-things .icon-text {
+        text-align: center !important;
+    }
+
+    .explore-things .icon-text h3 {
+        margin-bottom: 0;
+    }
+}

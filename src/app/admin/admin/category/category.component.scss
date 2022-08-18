@@ -1,0 +1,42 @@
+.text-6 {
+    font-size: 1.80em !important;
+}
+
+.font-weight-bold, b, strong {
+    font-weight: 700 !important;
+}
+
+.dark-modal .modal-content {
+    background-color: #292b2c;
+    color: white;
+}
+
+.dark-modal .close {
+    color: white;
+}
+
+.light-blue-backdrop {
+    background-color: #5cb3fd;
+}
+
+.w-74 {
+    width: 74%;
+}
+
+// table.dataTable thead .sorting:after,
+// table.dataTable thead .sorting:before,
+// table.dataTable thead .sorting_asc:after,
+// table.dataTable thead .sorting_asc:before,
+// table.dataTable thead .sorting_asc_disabled:after,
+// table.dataTable thead .sorting_asc_disabled:before,
+// table.dataTable thead .sorting_desc:after,
+// table.dataTable thead .sorting_desc:before,
+// table.dataTable thead .sorting_desc_disabled:after,
+// table.dataTable thead .sorting_desc_disabled:before {
+//   bottom: .5em;
+// }
+
+table.dataTable {
+    margin-top: 25px !important;
+    margin-bottom: 25px !important;
+}

@@ -1,0 +1,154 @@
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="header-bar d-flex justify-content-between pe-0">
+                <div class="align-items-top mt-3 w-100 main-container">
+                    <div class="d-flex align-items-top mb-3 logo-img top-header py-3 pe-3">
+                        <div (click)="showHideSidebar()" class="menu text-center d-flex justify-content-between ps-4"
+                            style="margin-top: 10px;">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </div>
+                        <div class="d-flex justify-content-between ps-1 w-100">
+                            <a routerLink="/admin/category">
+                                <img src="../../assets/images/icon/logo.png" alt="logo" class="ms-2 logo ps-4 mt-2"
+                                    style="width: 200px;"></a>
+                            <!-- <div class="center-box d-flex justify-content-end">
+                                <div class="search-box">
+                                    <div class="d-flex">
+                                        <div class="form-outline">
+                                            <input type="search" id="form1" class="form-control">
+                                        </div>
+                                        <button type="button" class="btn border border-start-0">
+                                            <i class="ri-search-line"></i>
+                                        </button>
+                                        <div class="microphone ms-2 text-center">
+                                            <i class="fa fa-microphone " aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="right-box d-flex justify-content-end">
+                                <div class="d-flex">
+                                    <div class="icon-box mt-2">
+                                        <!-- <i class="ri-play-list-line"></i> -->
+                                        <i class="ri-mail-open-fill ms-2 me-2"></i>
+                                        <i class="ri-notification-2-fill"></i>
+                                    </div>
+                                    <div class="d-flex ms-4 user-icon">
+                                        <div class="img-box">
+                                            <div class="dropdown">
+                                                <button routerLink="/admin/admin-login" *ngIf="!isAdminLoggedIn" class="signInBtn"
+                                                    type="button" title="Sign In">
+                                                    <i class="ri-user-line"></i>
+                                                </button>
+                                                <button *ngIf="isAdminLoggedIn" (click)="userMenuOpen()" type="button"
+                                                    id="dropdownMenuButton" data-toggle="dropdown">
+                                                    <img src="../../assets/images/u1.jpg" alt="user-img">
+                                                </button>
+                                                <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                                                    <div class="d-flex">
+                                                        <img src="../../assets/images/u1.jpg" alt="user-img">
+                                                        <div class="text-bx ">
+                                                            <a routerLink=""
+                                                                class=" dropdown-item text-center ms-2"><b>{{username}}</b></a>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="mt-2 mb-3">
+                                                    <!-- <div class="d-flex align-items-center pt-2 pb-1 dropdown-active">
+                                                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>                                                        
+                                                        <a routerLink="" class="dropdown-item p-0 ms-3">My Profile</a>
+                                                    </div> -->
+                                                    <div class="d-flex align-items-center pt-2 pb-1 dropdown-active">
+                                                        <i class="fa fa-video-camera" aria-hidden="true"></i>                                                        
+                                                        <a (click)="userMenuOpen()" routerLink="/dashboard/home" target=”_blank” class="dropdown-item p-0 ms-3">Go to Tokentube</a>
+                                                    </div>
+                                                    <!-- <div class="d-flex align-items-center pt-2 pb-1 dropdown-active">
+                                                        <i class="fa fa-lock" aria-hidden="true"></i>                                                        
+                                                        <a routerLink="" class="dropdown-item p-0 ms-3">Lock Screen</a>
+                                                    </div> -->
+                                                    <div class="d-flex align-items-center pt-2 pb-1 dropdown-active">
+                                                        <i class="fa fa-sign-out" aria-hidden="true"></i>                                                        
+                                                        <a class="dropdown-item p-0 ms-3" (click)="signOut()">Sign Out</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="m-0 p-0">
+                <div class="align-items-top mb-2 sidebar-menu" style="margin-top: 56px !important;">
+                    <div class="left-box">
+                        <div>
+                            <div #sideBarContent id="sideBarContent"
+                                *ngIf="!showHideMenu" class="sidebar sidebar-fixed">
+                                <ul class="ps-0 icon-text mt-4">
+                                    <li routerLink="/admin/category" class="mt-4 text-center pointer">
+                                        <i class="fa fa-caret-square-o-right" aria-hidden="true"></i>
+                                        <span>Category</span>
+                                    </li>
+                                    <li routerLink="/admin/tag" class="mt-4 text-center pointer">
+                                        <i class="fa fa-tags" aria-hidden="true"></i>
+                                        <span>Tags</span>
+                                    </li>
+                                    <li routerLink="/admin/video" class="mt-4 text-center pointer">
+                                        <i class="fa fa-video-camera" aria-hidden="true"></i>
+                                        <span>Video</span>
+                                    </li>
+                                    <li routerLink="/admin/banner" class="mt-4  text-center pointer">
+                                        <i class="fa fa-id-card-o" aria-hidden="true"></i>
+                                        <span>Banner</span>
+                                    </li>                                                                        
+                                </ul>
+                            </div>
+
+                            <div *ngIf="showHideMenu" [ngClass]="(showHideMenu) ? ' active' : ''" class="sidebar1"
+                                style="margin-top: 40px;">
+                                <div class="sidebar-overlay"></div>
+                                <div class="sidebar-content">
+                                    <div (click)="showHideSidebar()" class="menu" style="margin-top: 20px;">
+                                        <i class="fa fa-bars" aria-hidden="true"></i>
+                                        <a routerLink="/admin/category"><img src="../../assets/images/icon/logo.png"
+                                                alt="logo" class="ms-2 logo ps-3">
+                                        </a>
+                                    </div>
+                                    <div class="nav-left">
+                                        <ul class="ps-0 icon-text  mt-4">
+                                            <li (click)="showHideSidebar()" routerLink="/admin/category" class="mt-3 pointer">
+                                                <i class="fa fa-caret-square-o-right" aria-hidden="true"></i>                                                
+                                                <span class="ms-4">Category</span>
+                                            </li>
+                                            <li (click)="showHideSidebar()" routerLink="/admin/tag" class="mt-3 pointer">
+                                                <i class="fa fa-tags" aria-hidden="true"></i>
+                                                <span class="ms-4">Tags</span>
+                                            </li>
+                                            <li (click)="showHideSidebar()" routerLink="/admin/video" class="mt-3 pointer">
+                                                <i class="fa fa-video-camera" aria-hidden="true"></i>                                                
+                                                <span class="ms-4">Video</span>
+                                            </li>
+                                            <li (click)="showHideSidebar()" routerLink="/admin/banner" class="mt-3 pointer">
+                                                <i class="fa fa-id-card-o" aria-hidden="true"></i>
+                                                <span class="ms-4">Banner</span>
+                                            </li>                                      
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-2">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
